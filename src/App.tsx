@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import WorkInProgress from './Pages/WorkInProgress'
-import Home from './Pages/Home'
+import WorkInProgress from './pages/WorkInProgress'
+import Home from  './pages/Home'
 
 const Styled = {
   AppContainer: styled.div`

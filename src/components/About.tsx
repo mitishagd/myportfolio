@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 
 const Styled = {
@@ -8,8 +7,8 @@ const Styled = {
     margin: 20px auto;
     line-height: 1.6;
     white-space: pre-line;
-    max-width: 550px;
-    font-color: #30c671ff;
+    max-width: 600px;
+    font-weight: normal;
     `
 }
 

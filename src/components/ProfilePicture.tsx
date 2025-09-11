@@ -1,7 +1,6 @@
-import React from "react";
 import styled from "styled-components";
 
-import ProfilePic from "../Assets/Picture.JPG";
+import Picture from '../assets/Picture.jpg'
 
 const Styled = {
   Container: styled.div`
@@ -21,7 +20,7 @@ const Styled = {
 const ProfilePicture = () => {
   return (
     <Styled.Container>
-      <Styled.Image src={ProfilePic} alt="Profile" />
+      <Styled.Image src={Picture} alt="Profile" />
     </Styled.Container>
   )
 }

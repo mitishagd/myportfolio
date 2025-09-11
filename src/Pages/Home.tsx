@@ -2,8 +2,9 @@ import { useState } from 'react'
 import styled from 'styled-components'
 
 
-import About from './About'
-import ProfilePicture from './ProfilePicture'
+import About from '../components/About'
+import ProfilePicture from '../components/ProfilePicture'
+import SocialsSidebar from  '../components/SocialsSidebar'
 
 const Styled = {
   Container: styled.div`
@@ -12,7 +13,6 @@ const Styled = {
     justify-content: center;
     align-items: center;
     overflow-y: auto;
-    font-color: #30c671ff;
 
     `,
   Intro: styled.div<{_isHovered: boolean}>`
@@ -23,7 +23,9 @@ const Styled = {
     align-items: center;
     font-size: ${({ _isHovered }) => (_isHovered ? '16px' : '22px')};
     animation: ${({ _isHovered }) => (!_isHovered && 'fadeIn 0.5s forwards')};
-    margin: 20px 0;
+    `,
+    ProfilePicture: styled(ProfilePicture)`
+      position: right;
     `
 }
 
@@ -33,7 +35,8 @@ const Home = () => {
     const [isHovered, setIsHovered] = useState(false);
     return (
         <Styled.Container>
-            <ProfilePicture />
+            <SocialsSidebar />
+            <Styled.ProfilePicture />
             <Styled.Intro _isHovered={isHovered} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} > 
                 {isHovered ? <About /> : introText} 
             </Styled.Intro>
