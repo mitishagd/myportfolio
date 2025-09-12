@@ -10,6 +10,8 @@ const Styled = {
     scale: 1.25;
     clip-path: circle();
     overflow: hidden;
+    justify-content: right;
+    align-items: right;
   `,
   Image: styled.img`
     width: 100%;

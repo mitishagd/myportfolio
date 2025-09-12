@@ -5,15 +5,20 @@ import styled from 'styled-components'
 import About from '../components/About'
 import ProfilePicture from '../components/ProfilePicture'
 import SocialsSidebar from  '../components/SocialsSidebar'
+import Experience from '../components/Experience'
+import Skills from '../components/Skills'
 
 const Styled = {
-  Container: styled.div`
+  SocialsSidebar: styled(SocialsSidebar)`
+
+    `,  
+  AboutContainer: styled.div`
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow-y: auto;
-
+    margin: 0 10%;
     `,
   Intro: styled.div<{_isHovered: boolean}>`
     width: 100vw;
@@ -21,27 +26,35 @@ const Styled = {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: ${({ _isHovered }) => (_isHovered ? '16px' : '22px')};
+    font-size: ${({ _isHovered }) => (_isHovered ? '20px' : '22px')};
     animation: ${({ _isHovered }) => (!_isHovered && 'fadeIn 0.5s forwards')};
     `,
     ProfilePicture: styled(ProfilePicture)`
-      position: right;
+      float: right;
+    `,
+    Root: styled.div`
+      
     `
 }
 
 const introText = "Hi, I am Mitisha Ganesha Dodderi."
+const bioText = "Software Engineer | Passionate about tech improving lives | Avid reader"
 
 const Home = () => {
     const [isHovered, setIsHovered] = useState(false);
     return (
-        <Styled.Container>
-            <SocialsSidebar />
-            <Styled.ProfilePicture />
-            <Styled.Intro _isHovered={isHovered} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} > 
-                {isHovered ? <About /> : introText} 
-            </Styled.Intro>
-            
-        </Styled.Container>
+        <Styled.Root>
+            <Styled.SocialsSidebar />
+            <Styled.AboutContainer>
+                <Styled.ProfilePicture />
+                <Styled.Intro _isHovered={isHovered} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} > 
+                    {isHovered ? bioText : introText} 
+                </Styled.Intro>
+            </Styled.AboutContainer>
+            <About />
+            <Skills />
+            <Experience />
+        </Styled.Root>
     )
 }
 

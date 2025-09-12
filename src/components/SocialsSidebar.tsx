@@ -6,7 +6,11 @@ const Styled = {
   Sidebar: styled.div`
     display: block;
     padding: 20px;
-    width: 60px
+    width: 60px;
+    height: 100vh;
+    position: fixed;
+    top: 40%;
+    left: 0;
     `,
 }
 
