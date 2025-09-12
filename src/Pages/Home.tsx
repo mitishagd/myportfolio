@@ -7,6 +7,7 @@ import ProfilePicture from '../components/ProfilePicture'
 import SocialsSidebar from  '../components/SocialsSidebar'
 import Experience from '../components/Experience'
 import Skills from '../components/Skills'
+import Footer from '../components/Footer'
 
 const Styled = {
   SocialsSidebar: styled(SocialsSidebar)`
@@ -54,6 +55,7 @@ const Home = () => {
             <About />
             <Skills />
             <Experience />
+            <Footer />
         </Styled.Root>
     )
 }
