@@ -7,16 +7,12 @@ const Styled = {
     text-align: center;
     margin-left: 15%;
     width: 70%;
-    margin-bottom: 40px;
-
+    margin-bottom: 100px;
+    height: 100vh;
   `,
   Title: styled.h2`
     font-size: 24px;
-    margin-bottom: 10px;
-  `,
-  MySQLIcon: styled(MySQLIcon)`
-    margin: 10px;
-    scale: 4;
+    margin-bottom: 80px;
   `,
 };
 
@@ -24,24 +20,24 @@ const Skills = () => {
     return (
         <Styled.Root>
             <Styled.Title>Skills</Styled.Title>
-            <ReactIcon size={100} />
-            <TypeScriptIcon size={100} /> 
-            <JavaScriptIcon size={100} />
-            <HTMLIcon size={100} />
-            <CSSIcon size={100} />
-            <NodeJSIcon size={100} />
-            <PythonIcon size={100} />
-            <DjangoIcon size={100} />
-            <JavaIcon size={100} />
-            <SpringBootIcon size={100} />
-            <GraphqlIcon size={100} />
-            <Styled.MySQLIcon _isScale/>
-            <MongoDBIcon size={100} />
-            <JenkinsIcon size={100} />
-            <DockerIcon size={100} />
-            <GitIcon size={100} />
-            <VercelIcon size={100} />
-            <AwsIcon size={100} />
+            <ReactIcon />
+            <TypeScriptIcon />
+            <JavaScriptIcon />
+            <HTMLIcon />
+            <CSSIcon />
+            <NodeJSIcon />
+            <PythonIcon />
+            <DjangoIcon />
+            <JavaIcon />
+            <SpringBootIcon />
+            <GraphqlIcon />
+            <MySQLIcon  />
+            <MongoDBIcon />
+            <JenkinsIcon />
+            <DockerIcon />
+            <GitIcon />
+            <VercelIcon />
+            <AwsIcon />
         </Styled.Root>
     )
 }

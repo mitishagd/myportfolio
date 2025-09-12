@@ -7,6 +7,7 @@ const Styled = {
   AppContainer: styled.div`
     overflow-y: auto;
     font-family: Calibri, sans-serif;
+    background-color: #f3fcffff;
   `
 }
 

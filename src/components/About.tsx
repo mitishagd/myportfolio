@@ -10,10 +10,11 @@ const Styled = {
     white-space: pre-line;
     max-width: 600px;
     font-weight: normal;
+    height: 100vh;
     `,
     Title: styled.h2`
     font-size: 24px;
-    margin-bottom: 10px;
+    margin-bottom: 50px;
   `,
 }
 
@@ -22,7 +23,7 @@ const aboutText = "I am a Software Engineer, based in Bay Area.\nI most recently
 const About = () => {
     return (
         <Styled.Container>
-            <Styled.Title>About</Styled.Title>
+            <Styled.Title>About Me</Styled.Title>
             {aboutText}
         </Styled.Container>
     )

@@ -16,8 +16,8 @@ const Styled = {
     line-height: 1.5;
   `,
   Position: styled.div`
-    margin: 10px 20px;
-    padding: 10px 20px;
+    margin: 5px 20px;
+    padding: 5px 20px;
   `,
   Company: styled.a`
     font-size: 20px;
