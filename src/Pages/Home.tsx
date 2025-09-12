@@ -2,12 +2,12 @@ import { useState } from 'react'
 import styled from 'styled-components'
 
 
-import About from '../components/About'
-import ProfilePicture from '../components/ProfilePicture'
-import SocialsSidebar from  '../components/SocialsSidebar'
-import Experience from '../components/Experience'
-import Skills from '../components/Skills'
-import Footer from '../components/Footer'
+import About from '../components/About.tsx'
+import ProfilePicture from '../components/ProfilePicture.tsx'
+import SocialsSidebar from  '../components/SocialsSidebar.tsx'
+import Experience from '../components/Experience.tsx'
+import Skills from '../components/Skills.tsx'
+import Footer from '../components/Footer.tsx'
 
 const Styled = {
   SocialsSidebar: styled(SocialsSidebar)`

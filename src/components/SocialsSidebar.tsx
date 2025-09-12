@@ -1,6 +1,5 @@
-import React from "react";
 import styled from "styled-components";
-import { LinkedInIcon, GithubIcon, MediumIcon, EmailIcon } from "./Icons"
+import { LinkedInIcon, GithubIcon, MediumIcon, EmailIcon } from "./Icons.tsx"
 
 const Styled = {
   Sidebar: styled.div`

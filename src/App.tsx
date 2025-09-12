@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-// import WorkInProgress from './pages/WorkInProgress'
-import Home from  './pages/Home'
+import WorkInProgress from './pages/WorkInProgress.tsx'
+import Home from  './pages/Home.tsx'
 
 const Styled = {
   AppContainer: styled.div`
@@ -10,14 +10,13 @@ const Styled = {
   `
 }
 
-// const isWorkInProgress = false;
+const isWorkInProgress = false;
 
 const App = () => {
   
   return (
     <Styled.AppContainer>
-      {/* {isWorkInProgress ? <WorkInProgress /> : <Home />} */}
-      <Home />
+      {isWorkInProgress ? <WorkInProgress /> : <Home />}
     </Styled.AppContainer>
   )
 }

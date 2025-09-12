@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { DjangoIcon, JavaScriptIcon, PythonIcon, ReactIcon, TypeScriptIcon, HTMLIcon, CSSIcon, GitIcon, VercelIcon, AwsIcon, JavaIcon, SpringBootIcon, MongoDBIcon, JenkinsIcon, GraphqlIcon, DockerIcon, NodeJSIcon, MySQLIcon } from "./Icons";
+import { DjangoIcon, JavaScriptIcon, PythonIcon, ReactIcon, TypeScriptIcon, HTMLIcon, CSSIcon, GitIcon, VercelIcon, AwsIcon, JavaIcon, SpringBootIcon, MongoDBIcon, JenkinsIcon, GraphqlIcon, DockerIcon, NodeJSIcon, MySQLIcon } from "./Icons.tsx";
 
 const Styled = {
   Root: styled.div`
