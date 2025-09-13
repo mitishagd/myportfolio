@@ -10,7 +10,7 @@ const Styled = {
     white-space: pre-line;
     max-width: 600px;
     font-weight: normal;
-    height: 100vh;
+    height: 100%;
     `,
     Title: styled.h2`
     font-size: 24px;

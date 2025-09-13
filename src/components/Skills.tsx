@@ -7,7 +7,7 @@ const Styled = {
     text-align: center;
     margin-left: 15%;
     width: 70%;
-    height: 100vh;
+    height: 100%;
   `,
   Title: styled.h2`
     font-size: 24px;
