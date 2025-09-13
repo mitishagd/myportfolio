@@ -39,7 +39,7 @@ const Styled = {
 }
 
 const introText = "Hi, I am Mitisha Ganesha Dodderi."
-const bioText = "Software Engineer | Passionate about tech improving lives | Avid reader"
+const bioText = "Software Engineer | Passionate about tech improving lives | Dog Mom | Avid reader"
 
 const Home = () => {
     const [isHovered, setIsHovered] = useState(false);
