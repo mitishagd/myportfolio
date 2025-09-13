@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import styled from 'styled-components'
 
-
 import About from '../components/About.tsx'
 import ProfilePicture from '../components/ProfilePicture.tsx'
 import SocialsSidebar from  '../components/SocialsSidebar.tsx'
