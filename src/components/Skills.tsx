@@ -8,6 +8,7 @@ const Styled = {
     margin-left: 15%;
     width: 70%;
     height: 100%;
+    margin-bottom: 100px;
   `,
   Title: styled.h2`
     font-size: 24px;
