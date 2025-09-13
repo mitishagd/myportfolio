@@ -8,6 +8,7 @@ import SocialsSidebar from  '../components/SocialsSidebar.tsx'
 import Experience from '../components/Experience.tsx'
 import Skills from '../components/Skills.tsx'
 import Footer from '../components/Footer.tsx'
+import NavBar from '../components/NavBar.tsx'
 
 const Styled = {
   SocialsSidebar: styled(SocialsSidebar)`
@@ -45,6 +46,7 @@ const Home = () => {
     const [isHovered, setIsHovered] = useState(false);
     return (
         <Styled.Root>
+            <NavBar />
             <Styled.SocialsSidebar />
             <Styled.AboutContainer>
                 <Styled.ProfilePicture />
