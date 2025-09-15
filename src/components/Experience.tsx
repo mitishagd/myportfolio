@@ -3,7 +3,7 @@ import styled from "styled-components";
 const Styled = {
   Root: styled.div`
     text-align: center;
-    margin-left: 15%;
+    margin-left: 17%;
     width: 65%;
     margin-bottom: 40px;
 
@@ -13,6 +13,7 @@ const Styled = {
     margin-bottom: 10px;
   `,
   Content: styled.div`
+    font-size: 16px;
     line-height: 1.5;
   `,
   Position: styled.div`
@@ -20,20 +21,21 @@ const Styled = {
     padding: 5px 20px;
   `,
   Company: styled.a`
-    font-size: 16px;
     font-style: italic;
     color: grey;
   `,
   Role: styled.div`
-    font-size: 16px;
   `,
-  Duration: styled.div`
-    font-size: 16px;
+  Duration: styled.td`
     font-weight: normal;
-    min-width: 45%;
+    min-width: 200px;
+    vertical-align: top;
   `,
   Description: styled.ul`
-    font-size: 16px;
+    text-align: left;
+    margin-left: -20px;
+    `,
+  RoleAndDescription: styled.td`
     text-align: left;
     `
 };
@@ -44,23 +46,21 @@ const Experience = () => {
             <Styled.Title>Experience</Styled.Title>
             <Styled.Content>
               <table>
-                <tr>
+                <Styled.Position>
                   <Styled.Duration>July 2023 - Sept 2023</Styled.Duration>
-                  <td>
-                    <Styled.Role> Software  Development Engineer II </Styled.Role>
-                    <Styled.Company target="_blank" href="https://www.98point6.com/">98point6 Technologies Inc.</Styled.Company>
+                  <Styled.RoleAndDescription>
+                    <Styled.Role> Software  Development Engineer II, <Styled.Company target="_blank" href="https://www.98point6.com/">98point6 Technologies Inc.</Styled.Company></Styled.Role>
                     <Styled.Description>
                         <li>Led cross functional collaboration of teams to design and develop a user profile management tool for healthcare professionals and devised comprehensive testing plans.</li>
                         <li>Created a FHIR compliant user database schema and used GraphQL for querying the database.</li>
                         <li>Contributed to a 50% reduction in physician visit times through innovative solutions.</li>
                     </Styled.Description>
-                  </td>
-                </tr>
-                <tr>
+                  </Styled.RoleAndDescription>
+                </Styled.Position>
+                <Styled.Position>
                   <Styled.Duration>Jan 2019 - July 2023</Styled.Duration>
-                  <td>
-                    <Styled.Role> Software Development Engineer </Styled.Role>
-                    <Styled.Company target="_blank" href="https://www.98point6.com/">98point6 Technologies Inc.</Styled.Company>
+                  <Styled.RoleAndDescription>
+                    <Styled.Role> Software Development Engineer, <Styled.Company target="_blank" href="https://www.98point6.com/">98point6 Technologies Inc.</Styled.Company> </Styled.Role>
                     <Styled.Description>
                         <li>Set up a web app for behavioral health patient cases, with CI/CD and deployed it using AWS CDK. </li>
                         <li>Achieved web accessibility of patient web app through adherence to WCAG 2.1 guidelines and creating a responsive design for desktop, tablet, and mobile devices.</li>
@@ -72,36 +72,33 @@ const Experience = () => {
                         <li>Performed platform maintenance by adding ESLint rules, safely updating packages and modules, migrated production builds to a more secure S3 bucket.</li>
                         <li>Conducted code and design reviews, technical and behavioral interviews, and participated in mentoring.</li>
                     </Styled.Description>
-                  </td>
-                </tr>
-                <tr>
+                  </Styled.RoleAndDescription>
+                </Styled.Position>
+                <Styled.Position>
                   <Styled.Duration>Sept 2019 - Dec 2019</Styled.Duration>
-                  <td>
-                    <Styled.Role> Undergraduate Teaching Assistant </Styled.Role>
-                    <Styled.Company target="_blank" href="https://www.khoury.northeastern.edu/">Northeastern University, Khoury College of Computer Sciences</Styled.Company>
+                  <Styled.RoleAndDescription>
+                    <Styled.Role> Undergraduate Teaching Assistant, <Styled.Company target="_blank" href="https://www.khoury.northeastern.edu/">Northeastern University, Khoury College of Computer Sciences</Styled.Company> </Styled.Role>
                     <Styled.Description>
                         <li>Conducted academic tutoring and grading for Computer Science and its Application (CS1100).</li>
                     </Styled.Description>
-                  </td>
-                </tr>
-                <tr>
+                  </Styled.RoleAndDescription>
+                </Styled.Position>
+                <Styled.Position>
                   <Styled.Duration>May 2019 - Aug 2019</Styled.Duration>
-                  <td>
-                    <Styled.Role> Software Engineer Intern </Styled.Role>
-                    <Styled.Company target="_blank" href="https://www.98point6.com/">98point6 Technologies Inc.</Styled.Company>
+                  <Styled.RoleAndDescription>
+                    <Styled.Role> Software Engineer Intern, <Styled.Company target="_blank" href="https://www.98point6.com/">98point6 Technologies Inc.</Styled.Company> </Styled.Role>
                     <Styled.Description>
                         <li>Created a scalable Chrome extension to extract Clinician data from Modio and automatically fill out state licensing application, using JavaScript, Webpack, and Babel.</li>
                         <li>Updated the designs for the video calling feature to be more intuitive and follow the industry standards using React with CSS.</li>
                         <li>Improved user data privacy and security by implementing a caching system to replace hard-disk storage.</li>
                         <li>Enhanced the web application by adding new functionalities to improve user experience.</li>
                     </Styled.Description>
-                  </td>
-                </tr>
-                <tr>
+                  </Styled.RoleAndDescription>
+                </Styled.Position>
+                <Styled.Position>
                   <Styled.Duration>May 2018 - Dec 2018</Styled.Duration>
-                  <td>
-                    <Styled.Role> Software Development Engineer Co-op </Styled.Role>
-                    <Styled.Company target="_blank" href="https://www.addgene.org/">Addgene</Styled.Company>
+                  <Styled.RoleAndDescription>
+                    <Styled.Role> Software Development Engineer Co-op, <Styled.Company target="_blank" href="https://www.addgene.org/">Addgene</Styled.Company> </Styled.Role>
                     <Styled.Description>
                         <li>Built new features for the website and created DjangoCMS Plugins for easier UI and content management.</li>
                         <li>Documented Celery, automated tasks using Celery Beat and converted Cron jobs to Celery Beat tasks.</li>
@@ -110,8 +107,8 @@ const Experience = () => {
                         <li>Ported Python2 code to Python3 to accomplish company goal to upgrade Django 1.11 to Django 2.1 with help of python-futurize library in Agile development cycles.</li>
                         <li>Eliminated need of manual testing by developing unit tests and end-to-end automation test scripts using Selenium.</li>
                     </Styled.Description>
-                  </td>
-                </tr>
+                  </Styled.RoleAndDescription>
+                </Styled.Position>
               </table>
                 
             </Styled.Content>
