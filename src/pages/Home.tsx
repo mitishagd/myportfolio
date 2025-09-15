@@ -31,7 +31,6 @@ const Styled = {
     justify-content: center;
     align-items: center;
     font-size: ${({ _isHovered }) => (_isHovered ? '20px' : '22px')};
-    animation: ${({ _isHovered }) => (!_isHovered && 'fadeIn 0.5s forwards')};
     `,
     ProfilePicture: styled(ProfilePicture)`
       float: right;

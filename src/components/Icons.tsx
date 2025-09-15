@@ -21,15 +21,10 @@ import css from '../assets/css.svg'
 
 
 const Styled = {
-  SocialIcon: styled.img<{ size?: number, _isScale?: boolean}>`
-    width: 25px;
-    height: 25px;
-    padding: 5px;
-  `,
   SkillsIcon: styled.img<{ size?: number, _isScale?: boolean}>`
-    width: 100px;
-    height: 100px;
-    margin: 10px;
+    width: 50px;
+    height: 50px;
+    margin: 30px;
     padding: 5px;
   `,
   SocialsIcon: styled.div<{ size?: number, _isScale?: boolean}>`
