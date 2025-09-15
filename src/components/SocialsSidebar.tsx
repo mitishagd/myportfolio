@@ -2,6 +2,8 @@ import styled from "styled-components";
 import { LinkedInIcon, GithubIcon, MediumIcon, EmailIcon } from "./Icons.tsx"
 import logo from '../assets/logo.png'
 import darkLogo from '../assets/logo-dark.png'
+import { DARK_THEME } from "../themes/DarkTheme.tsx";
+import { LIGHT_THEME } from "../themes/LightTheme.tsx";
 
 const Styled = {
   Sidebar: styled.div`
@@ -17,7 +19,7 @@ const Styled = {
     width: 85px;
     `,
   Socials: styled.div`
-  display: block;
+    display: block;
     padding: 20px;
     width: 60px;
     height: 100vh;
@@ -27,24 +29,30 @@ const Styled = {
     `
 }
 
-const SocialsSidebar = () => {
+type Props = {
+    isDarkMode: boolean;
+}
+
+const SocialsSidebar = (props: Props): React.JSX.Element => {
+    const theme = props.isDarkMode ? DARK_THEME : LIGHT_THEME;
+
     return (
         <Styled.Sidebar>
-            <Styled.Logo src={darkLogo} alt="Logo" />
+            <Styled.Logo src={props.isDarkMode ? darkLogo : logo} alt="Logo" />
 
             <Styled.Socials>
                 <a target="_blank" href="https://www.linkedin.com/in/mitisha-dodderi/">
-                <LinkedInIcon />
+                <LinkedInIcon color={theme.primary} />
             </a>
 
             <a target="_blank" href="https://github.com/mitishagd">
-                <GithubIcon/>
+                <GithubIcon color={theme.primary}/>
             </a>
             <a target="_blank" href="https://medium.com/@mitisha.dodderi">
-                <MediumIcon />
+                <MediumIcon color={theme.primary}/>
             </a>
             <a target="_blank" href="mailto:mitisha.dodderi@gmail.com">
-                <EmailIcon />
+                <EmailIcon color={theme.primary}/>
             </a>
         </Styled.Socials>
         </Styled.Sidebar>

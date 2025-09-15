@@ -7,8 +7,8 @@ const Styled = {
     overflow-y: auto;
     font-family: Calibri, sans-serif;
     // background-color: #020e03;
-    background-color: #022e27;
-    color: white
+    // background-color: #022e27;
+    // color: white
   `
 }
 

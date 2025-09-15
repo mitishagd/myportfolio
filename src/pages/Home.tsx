@@ -8,6 +8,8 @@ import Experience from '../components/Experience.tsx'
 import Skills from '../components/Skills.tsx'
 import Footer from '../components/Footer.tsx'
 import NavBar from '../components/NavBar.tsx'
+import { DARK_THEME } from '../themes/DarkTheme.tsx'
+import { LIGHT_THEME } from '../themes/LightTheme.tsx'
 
 const Styled = {
   SocialsSidebar: styled(SocialsSidebar)`
@@ -34,8 +36,9 @@ const Styled = {
     ProfilePicture: styled(ProfilePicture)`
       float: right;
     `,
-    Root: styled.div`
-      
+    Root: styled.div<{_isDarkMode: boolean}>`
+      background-color: ${({ _isDarkMode }) => (_isDarkMode ? DARK_THEME.background : LIGHT_THEME.background)};
+      color: ${({ _isDarkMode }) => (_isDarkMode ? DARK_THEME.color : LIGHT_THEME.color)};
     `
 }
 
@@ -44,20 +47,22 @@ const bioText = "Software Engineer | Passionate about tech improving lives | Dog
 
 const Home = () => {
     const [isHovered, setIsHovered] = useState(false);
+    const [isDarkMode, setIsDarkMode] = useState(true);
+
     return (
-        <Styled.Root>
+        <Styled.Root _isDarkMode={isDarkMode}>
             <NavBar />
-            <Styled.SocialsSidebar />
+            <Styled.SocialsSidebar isDarkMode={isDarkMode} />
             <Styled.AboutContainer>
                 <Styled.ProfilePicture />
                 <Styled.Intro _isHovered={isHovered} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} > 
                     {isHovered ? bioText : introText} 
                 </Styled.Intro>
             </Styled.AboutContainer>
-            <About />
-            <Skills />
-            <Experience />
-            <Footer />
+            <About isDarkMode={isDarkMode} />
+            <Skills isDarkMode={isDarkMode} />
+            <Experience isDarkMode={isDarkMode} />
+            <Footer isDarkMode={isDarkMode}/>
         </Styled.Root>
     )
 }

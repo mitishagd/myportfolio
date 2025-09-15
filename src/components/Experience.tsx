@@ -1,5 +1,8 @@
 import styled from "styled-components";
 
+import { DARK_THEME } from "../themes/DarkTheme.tsx";
+import { LIGHT_THEME } from "../themes/LightTheme.tsx";
+
 const Styled = {
   Root: styled.div`
     text-align: center;
@@ -8,8 +11,8 @@ const Styled = {
     margin-bottom: 40px;
 
   `,
-  Title: styled.h2`
-    color: #1f5014;
+  Title: styled.h2<{_isDarkMode: boolean}>`
+    color: ${({ _isDarkMode }) => (_isDarkMode ? DARK_THEME.primary : LIGHT_THEME.primary)};
     font-size: 24px;
     margin-bottom: 10px;
   `,
@@ -45,10 +48,14 @@ const Styled = {
     `
 };
 
-const Experience = () => {
+type Props = {
+    isDarkMode: boolean;
+}
+
+const Experience = (props: Props): React.JSX.Element => {
     return (
         <Styled.Root>
-            <Styled.Title>Experience</Styled.Title>
+            <Styled.Title _isDarkMode={props.isDarkMode}>Experience</Styled.Title>
             <Styled.Content>
               <table>
                 <Styled.Position>

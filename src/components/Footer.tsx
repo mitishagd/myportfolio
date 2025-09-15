@@ -1,16 +1,24 @@
 import styled from "styled-components";
 
+import { LIGHT_THEME } from "../themes/LightTheme";
+import { DARK_THEME } from "../themes/DarkTheme";
+
 const Styled = {
-  FooterContainer: styled.div`
+  FooterContainer: styled.div<{_isDarkMode: boolean}>`
     text-align: center;
     padding: 20px;
     font-size: 10px;
+    color: ${({ _isDarkMode }) => (_isDarkMode ? DARK_THEME.primary : LIGHT_THEME.primary)};
     `
 }
 
-const Footer = () => {
+type Props = {
+    isDarkMode: boolean;
+}
+
+const Footer = (props: Props) => {
     return (
-        <Styled.FooterContainer>
+        <Styled.FooterContainer _isDarkMode={props.isDarkMode}>
             <p>© Mitisha Ganesha Dodderi. All rights reserved.</p>
         </Styled.FooterContainer>
     )
