@@ -11,6 +11,7 @@ const Styled = {
     margin-bottom: 100px;
   `,
   Title: styled.h2`
+    color: #1f5014;
     font-size: 24px;
     margin-bottom: 80px;
   `,

@@ -22,6 +22,7 @@ const Styled = {
     margin: 0 10%;
     `,
   Intro: styled.div<{_isHovered: boolean}>`
+    color: #13300d
     width: 100vw;
     height: 100vh;
     display: flex;

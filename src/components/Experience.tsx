@@ -9,6 +9,7 @@ const Styled = {
 
   `,
   Title: styled.h2`
+    color: #1f5014;
     font-size: 24px;
     margin-bottom: 10px;
   `,
@@ -22,7 +23,7 @@ const Styled = {
   `,
   Company: styled.a`
     font-style: italic;
-    color: grey;
+    color: #222222;
   `,
   Role: styled.div`
   `,
@@ -30,6 +31,7 @@ const Styled = {
     font-weight: normal;
     min-width: 200px;
     vertical-align: top;
+
   `,
   Description: styled.ul`
     text-align: left;
@@ -37,6 +39,8 @@ const Styled = {
     `,
   RoleAndDescription: styled.td`
     text-align: left;
+    // display: block;
+    
     `
 };
 
