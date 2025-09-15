@@ -4,7 +4,7 @@ const Styled = {
   Root: styled.div`
     text-align: center;
     margin-left: 15%;
-    width: 70%;
+    width: 65%;
     margin-bottom: 40px;
 
   `,
@@ -20,20 +20,21 @@ const Styled = {
     padding: 5px 20px;
   `,
   Company: styled.a`
-    font-size: 20px;
+    font-size: 16px;
+    font-style: italic;
     color: grey;
   `,
   Role: styled.div`
     font-size: 16px;
-    font-style: italic;
   `,
   Duration: styled.div`
-    font-size: 14px;
+    font-size: 16px;
     font-weight: normal;
+    min-width: 45%;
   `,
   Description: styled.ul`
-    list-style-type: none;
     font-size: 16px;
+    text-align: left;
     `
 };
 
@@ -42,68 +43,77 @@ const Experience = () => {
         <Styled.Root>
             <Styled.Title>Experience</Styled.Title>
             <Styled.Content>
-                <Styled.Position>
-                    <Styled.Company target="_blank" href="https://www.98point6.com/">98point6 Technologies Inc.</Styled.Company>
+              <table>
+                <tr>
+                  <Styled.Duration>July 2023 - Sept 2023</Styled.Duration>
+                  <td>
                     <Styled.Role> Software  Development Engineer II </Styled.Role>
-                    <Styled.Duration>July 2023 - Sept 2023</Styled.Duration>
-                    <Styled.Description>
-                        <li>• Led cross functional collaboration of teams to design and develop a user profile management tool for healthcare professionals and devised comprehensive testing plans.</li>
-                        <li>• Created a FHIR compliant user database schema and used GraphQL for querying the database.</li>
-                        <li>• Contributed to a 50% reduction in physician visit times through innovative solutions.</li>
-                    </Styled.Description>
-                </Styled.Position>
-
-                <Styled.Position>
                     <Styled.Company target="_blank" href="https://www.98point6.com/">98point6 Technologies Inc.</Styled.Company>
+                    <Styled.Description>
+                        <li>Led cross functional collaboration of teams to design and develop a user profile management tool for healthcare professionals and devised comprehensive testing plans.</li>
+                        <li>Created a FHIR compliant user database schema and used GraphQL for querying the database.</li>
+                        <li>Contributed to a 50% reduction in physician visit times through innovative solutions.</li>
+                    </Styled.Description>
+                  </td>
+                </tr>
+                <tr>
+                  <Styled.Duration>Jan 2019 - July 2023</Styled.Duration>
+                  <td>
                     <Styled.Role> Software Development Engineer </Styled.Role>
-                    <Styled.Duration>Jan 2019 - July 2023</Styled.Duration>
-                    <Styled.Description>
-                        <li>• Set up a web app for behavioral health patient cases, with CI/CD and deployed it using AWS CDK. </li>
-                        <li>• Achieved web accessibility of patient web app through adherence to WCAG 2.1 guidelines and creating a responsive design for desktop, tablet, and mobile devices.</li>
-                        <li>• Built UI for integrating prescription history of patients from backend using REST APIs.</li>
-                        <li>• Enhanced the physician-facing web application, introducing algorithm-based predictions for diagnoses, medications, and lab orders, leading to visit time reduction by 50% (~3 minutes).</li>
-                        <li>• Implemented automated referral system to ensure timely delivery of contractual customer commitments.</li>
-                        <li>• Improved user experience with features like automated notes and delivery of diagnoses, medications, and treatment plans, as well as follow-up visit capabilities.</li>
-                        <li>• Analyzed and re-assessed the web KPIs, worked on operational duties, and authored technical documents. </li>
-                        <li>• Performed platform maintenance by adding ESLint rules, safely updating packages and modules, migrated production builds to a more secure S3 bucket.</li>
-                        <li>• Conducted code and design reviews, technical and behavioral interviews, and participated in mentoring.</li>
-                    </Styled.Description>
-                </Styled.Position>
-
-                <Styled.Position>
-                    <Styled.Company target="_blank" href="https://www.khoury.northeastern.edu/">Northeastern University, Khoury College of Computer Sciences</Styled.Company>
-                    <Styled.Role> Undergraduate Teaching Assistant </Styled.Role>
-                    <Styled.Duration>Sept 2019 - Dec 2019</Styled.Duration>
-                    <Styled.Description>
-                        <li>• Conducted academic tutoring and grading for Computer Science and its Application (CS1100).</li>
-                    </Styled.Description>
-                </Styled.Position>
-
-                <Styled.Position>
                     <Styled.Company target="_blank" href="https://www.98point6.com/">98point6 Technologies Inc.</Styled.Company>
+                    <Styled.Description>
+                        <li>Set up a web app for behavioral health patient cases, with CI/CD and deployed it using AWS CDK. </li>
+                        <li>Achieved web accessibility of patient web app through adherence to WCAG 2.1 guidelines and creating a responsive design for desktop, tablet, and mobile devices.</li>
+                        <li>Built UI for integrating prescription history of patients from backend using REST APIs.</li>
+                        <li>Enhanced the physician-facing web application, introducing algorithm-based predictions for diagnoses, medications, and lab orders, leading to visit time reduction by 50% (~3 minutes).</li>
+                        <li>Implemented automated referral system to ensure timely delivery of contractual customer commitments.</li>
+                        <li>Improved user experience with features like automated notes and delivery of diagnoses, medications, and treatment plans, as well as follow-up visit capabilities.</li>
+                        <li>Analyzed and re-assessed the web KPIs, worked on operational duties, and authored technical documents. </li>
+                        <li>Performed platform maintenance by adding ESLint rules, safely updating packages and modules, migrated production builds to a more secure S3 bucket.</li>
+                        <li>Conducted code and design reviews, technical and behavioral interviews, and participated in mentoring.</li>
+                    </Styled.Description>
+                  </td>
+                </tr>
+                <tr>
+                  <Styled.Duration>Sept 2019 - Dec 2019</Styled.Duration>
+                  <td>
+                    <Styled.Role> Undergraduate Teaching Assistant </Styled.Role>
+                    <Styled.Company target="_blank" href="https://www.khoury.northeastern.edu/">Northeastern University, Khoury College of Computer Sciences</Styled.Company>
+                    <Styled.Description>
+                        <li>Conducted academic tutoring and grading for Computer Science and its Application (CS1100).</li>
+                    </Styled.Description>
+                  </td>
+                </tr>
+                <tr>
+                  <Styled.Duration>May 2019 - Aug 2019</Styled.Duration>
+                  <td>
                     <Styled.Role> Software Engineer Intern </Styled.Role>
-                    <Styled.Duration>May 2019 - Aug 2019</Styled.Duration>
+                    <Styled.Company target="_blank" href="https://www.98point6.com/">98point6 Technologies Inc.</Styled.Company>
                     <Styled.Description>
-                        <li>• Created a scalable Chrome extension to extract Clinician data from Modio and automatically fill out state licensing application, using JavaScript, Webpack, and Babel.</li>
-                        <li>• Updated the designs for the video calling feature to be more intuitive and follow the industry standards using React with CSS.</li>
-                        <li>• Improved user data privacy and security by implementing a caching system to replace hard-disk storage.</li>
-                        <li>• Enhanced the web application by adding new functionalities to improve user experience.</li>
+                        <li>Created a scalable Chrome extension to extract Clinician data from Modio and automatically fill out state licensing application, using JavaScript, Webpack, and Babel.</li>
+                        <li>Updated the designs for the video calling feature to be more intuitive and follow the industry standards using React with CSS.</li>
+                        <li>Improved user data privacy and security by implementing a caching system to replace hard-disk storage.</li>
+                        <li>Enhanced the web application by adding new functionalities to improve user experience.</li>
                     </Styled.Description>
-                </Styled.Position>
-
-                <Styled.Position>
-                    <Styled.Company target="_blank" href="https://www.addgene.org/">Addgene</Styled.Company>
+                  </td>
+                </tr>
+                <tr>
+                  <Styled.Duration>May 2018 - Dec 2018</Styled.Duration>
+                  <td>
                     <Styled.Role> Software Development Engineer Co-op </Styled.Role>
-                    <Styled.Duration>May 2018 - Dec 2018</Styled.Duration>
+                    <Styled.Company target="_blank" href="https://www.addgene.org/">Addgene</Styled.Company>
                     <Styled.Description>
-                        <li>• Built new features for the website and created DjangoCMS Plugins for easier UI and content management.</li>
-                        <li>• Documented Celery, automated tasks using Celery Beat and converted Cron jobs to Celery Beat tasks.</li>
-                        <li>• Revamped deposit status page of plasmids and created tokenized URL to restrict access to the page.</li>
-                        <li>• Refactored legacy code by migrating a Django model into a different app without table and data loss.</li>
-                        <li>• Ported Python2 code to Python3 to accomplish company goal to upgrade Django 1.11 to Django 2.1 with help of python-futurize library in Agile development cycles.</li>
-                        <li>• Eliminated need of manual testing by developing unit tests and end-to-end automation test scripts using Selenium.</li>
+                        <li>Built new features for the website and created DjangoCMS Plugins for easier UI and content management.</li>
+                        <li>Documented Celery, automated tasks using Celery Beat and converted Cron jobs to Celery Beat tasks.</li>
+                        <li>Revamped deposit status page of plasmids and created tokenized URL to restrict access to the page.</li>
+                        <li>Refactored legacy code by migrating a Django model into a different app without table and data loss.</li>
+                        <li>Ported Python2 code to Python3 to accomplish company goal to upgrade Django 1.11 to Django 2.1 with help of python-futurize library in Agile development cycles.</li>
+                        <li>Eliminated need of manual testing by developing unit tests and end-to-end automation test scripts using Selenium.</li>
                     </Styled.Description>
-                </Styled.Position>
+                  </td>
+                </tr>
+              </table>
+                
             </Styled.Content>
         </Styled.Root>
     );
