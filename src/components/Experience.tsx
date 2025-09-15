@@ -23,7 +23,8 @@ const Styled = {
   `,
   Company: styled.a`
     font-style: italic;
-    color: #222222;
+    // color: #222222;
+    color: #03dac6;
   `,
   Role: styled.div`
   `,

@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-import logo from '../assets/logo.png'
 
 const Styled = {
   Container: styled.div`
