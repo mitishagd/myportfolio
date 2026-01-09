@@ -30,8 +30,8 @@ const Styled = {
     padding: 5px;
   `,
   SkillsIcon: styled.img<{ size?: number; _isScale?: boolean }>`
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
     margin: 10px;
     padding: 5px;
   `,
