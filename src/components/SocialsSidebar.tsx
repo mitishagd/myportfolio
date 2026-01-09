@@ -1,9 +1,15 @@
 import styled from 'styled-components'
 import { LinkedInIcon, GithubIcon, MediumIcon, EmailIcon } from './Icons.tsx'
-import logo from '../assets/logo.png'
+import logo from '../assets/icons/logo.png'
 import darkLogo from '../assets/logo-dark.png'
 import { DARK_THEME } from '../themes/DarkTheme.tsx'
 import { LIGHT_THEME } from '../themes/LightTheme.tsx'
+
+import { FaLinkedin, FaGithub, FaMedium, FaEnvelope } from 'react-icons/fa'
+
+export function GithubIconFa(props: { color: string; size?: number }) {
+  return <FaGithub color={props.color} size={props.size || 25} style={{ padding: '5px' }} />
+}
 
 const Styled = {
   Sidebar: styled.div`
@@ -46,7 +52,7 @@ const SocialsSidebar = (props: Props): React.JSX.Element => {
         </a>
 
         <a target="_blank" href="https://github.com/mitishagd">
-          <GithubIcon color={theme.primary} />
+          <GithubIconFa color={theme.primary} />
         </a>
         <a target="_blank" href="https://medium.com/@mitisha.dodderi">
           <MediumIcon color={theme.primary} />
