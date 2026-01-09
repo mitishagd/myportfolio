@@ -22,7 +22,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,css,json}\""
   },
   "eslintConfig": {
     "extends": [
@@ -43,7 +44,8 @@
     ]
   },
   "devDependencies": {
-    "@types/react": "^19.1.12"
+    "@types/react": "^19.1.12",
+    "prettier": "^3.7.4"
   },
   "resolutions": {
     "@types/react": "17.0.14",
