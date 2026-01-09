@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
-import Picture from '../assets/Picture.jpg'
+import Picture from '../assets/icons/Picture.jpg'
 
 const Styled = {
   Container: styled.div`
@@ -16,7 +16,7 @@ const Styled = {
   Image: styled.img`
     width: 100%;
     height: auto;
-  `
+  `,
 }
 
 const ProfilePicture = () => {
@@ -27,4 +27,4 @@ const ProfilePicture = () => {
   )
 }
 
-export default ProfilePicture;
+export default ProfilePicture
