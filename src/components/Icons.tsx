@@ -37,19 +37,19 @@ const Styled = {
   `,
 }
 
-export function LinkedInIcon(props: { size?: number; className?: string }) {
+export function LinkedInIcon(props: { color: string; size?: number; className?: string }) {
   return <Styled.SocialIcon src={linkedin} alt="" {...props} />
 }
 
-export function GithubIcon(props: { size?: number; className?: string }) {
+export function GithubIcon(props: { color: string; size?: number; className?: string }) {
   return <Styled.SocialIcon src={github} alt="" {...props} />
 }
 
-export function MediumIcon(props: { size?: number; className?: string }) {
+export function MediumIcon(props: { color: string; size?: number; className?: string }) {
   return <Styled.SocialIcon src={medium} alt="" {...props} />
 }
 
-export function EmailIcon(props: { size?: number; className?: string }) {
+export function EmailIcon(props: { color: string; size?: number; className?: string }) {
   return <Styled.SocialIcon src={email} alt="" {...props} />
 }
 
