@@ -11,14 +11,10 @@ const Styled = {
     align-items: center;
     font-size: 2rem;
     color: #333;
-  `
+  `,
 }
 
 const WorkInProgress = () => {
-    return (
-        <Styled.AppContainer>
-            Work in Progress . . .
-        </Styled.AppContainer>
-    )
+  return <Styled.AppContainer>Work in Progress . . .</Styled.AppContainer>
 }
 export default WorkInProgress
