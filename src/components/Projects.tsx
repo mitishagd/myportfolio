@@ -86,7 +86,7 @@ const Projects = () => {
                     <Styled.Github /> Code
                   </Styled.LinkButton>
                   <Styled.LinkButton
-                    href="https://github.com/mitishagd/CartoonGenerator"
+                    href="https://cartoon-generator-five.vercel.app/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
