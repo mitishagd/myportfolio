@@ -8,6 +8,8 @@ import Experience from '../components/Experience.tsx'
 import Skills from '../components/Skills.tsx'
 import Footer from '../components/Footer.tsx'
 import NavBar from '../components/NavBar.tsx'
+import { DARK_THEME } from '../themes/DarkTheme.tsx'
+import { LIGHT_THEME } from '../themes/LightTheme.tsx'
 import Projects from '../components/Projects.tsx'
 
 const Styled = {
@@ -21,6 +23,7 @@ const Styled = {
     margin: 0 10%;
   `,
   Intro: styled.div<{ _isHovered: boolean }>`
+    color: #13300d
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -28,11 +31,15 @@ const Styled = {
     align-items: center;
     font-size: ${({ _isHovered }) => (_isHovered ? '20px' : '22px')};
     animation: ${({ _isHovered }) => !_isHovered && 'fadeIn 0.5s forwards'};
-  `,
+    `,
   ProfilePicture: styled(ProfilePicture)`
     float: right;
   `,
-  Root: styled.div``,
+  Root: styled.div<{ _isDarkMode: boolean }>`
+    background-color: ${({ _isDarkMode }) =>
+      _isDarkMode ? DARK_THEME.background : LIGHT_THEME.background};
+    color: ${({ _isDarkMode }) => (_isDarkMode ? DARK_THEME.color : LIGHT_THEME.color)};
+  `,
 }
 
 const introText = 'Hi, I am Mitisha Ganesha Dodderi.'
@@ -40,10 +47,12 @@ const bioText = 'Software Engineer | Passionate about tech improving lives | Dog
 
 const Home = () => {
   const [isHovered, setIsHovered] = useState(false)
+  const [isDarkMode, setIsDarkMode] = useState(true)
+
   return (
-    <Styled.Root>
+    <Styled.Root _isDarkMode={isDarkMode}>
       <NavBar />
-      <Styled.SocialsSidebar />
+      <Styled.SocialsSidebar isDarkMode={isDarkMode} />
       <Styled.AboutContainer>
         <Styled.ProfilePicture />
         <Styled.Intro
@@ -54,11 +63,11 @@ const Home = () => {
           {isHovered ? bioText : introText}
         </Styled.Intro>
       </Styled.AboutContainer>
-      <About />
-      <Skills />
-      <Experience />
+      <About isDarkMode={isDarkMode} />
+      <Skills isDarkMode={isDarkMode} />
+      <Experience isDarkMode={isDarkMode} />
       <Projects />
-      <Footer />
+      <Footer isDarkMode={isDarkMode} />
     </Styled.Root>
   )
 }
