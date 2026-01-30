@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { LinkedInIcon, GithubIcon, MediumIcon, EmailIcon } from './Icons.tsx'
+import { LinkedInIcon, GithubIcon, MediumIcon, EmailIcon, GoodreadsIcon } from './Icons.tsx'
 import logo from '../assets/icons/logo.png'
 
 const Styled = {
@@ -74,6 +74,9 @@ const SocialsSidebar = () => {
         </a>
         <a target="_blank" href="https://medium.com/@mitisha.dodderi">
           <MediumIcon />
+        </a>
+        <a target="_blank" href="https://www.goodreads.com/user/show/YOUR_ID">
+          <GoodreadsIcon />
         </a>
       </Styled.Socials>
     </Styled.Sidebar>

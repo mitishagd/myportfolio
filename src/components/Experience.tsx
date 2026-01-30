@@ -32,7 +32,7 @@ const Styled = {
   `,
   Company: styled.a`
     font-style: italic;
-    color: grey;
+    color: #10b981;
     font-weight: normal;
   `,
   Role: styled.div`

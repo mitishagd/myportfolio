@@ -28,6 +28,10 @@ const Styled = {
     align-items: center;
     font-size: ${({ _isHovered }) => (_isHovered ? '20px' : '22px')};
     animation: ${({ _isHovered }) => !_isHovered && 'fadeIn 0.5s forwards'};
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
   `,
   ProfilePicture: styled(ProfilePicture)`
     float: right;
@@ -37,9 +41,17 @@ const Styled = {
       padding-top: 80px;
     }
   `,
-}
+  Name: styled.span`
+    color: #10b981;
+    margin-left: 0.25em;
 
-const introText = 'Hi, I am Mitisha Ganesha Dodderi.'
+    @media (max-width: 768px) {
+      display: block;
+      margin-left: 0;
+      margin-top: 5px;
+    }
+  `,
+}
 const bioText = 'Software Engineer | Passionate about tech improving lives | Dog Mom | Avid reader'
 
 const Home = () => {
@@ -55,7 +67,13 @@ const Home = () => {
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
-          {isHovered ? bioText : introText}
+          {isHovered ? (
+            bioText
+          ) : (
+            <>
+              Hi, I am <Styled.Name>Mitisha Ganesha Dodderi</Styled.Name>
+            </>
+          )}
         </Styled.Intro>
       </Styled.AboutContainer>
       <About />
