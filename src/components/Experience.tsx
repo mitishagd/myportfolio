@@ -23,6 +23,12 @@ const Styled = {
   Position: styled.div`
     margin: 5px 20px;
     padding: 5px 20px;
+
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 30px;
+    }
   `,
   Company: styled.a`
     font-style: italic;
@@ -35,7 +41,11 @@ const Styled = {
     vertical-align: top;
 
     @media (max-width: 768px) {
-      display: none;
+      display: block;
+      min-width: auto;
+      font-size: 14px;
+      color: grey;
+      margin-bottom: 5px;
     }
   `,
   Description: styled.ul`

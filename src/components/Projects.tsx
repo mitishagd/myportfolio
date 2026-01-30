@@ -26,13 +26,33 @@ const Styled = {
   ProjectCard: styled.tr`
     margin: 5px 20px;
     padding: 5px 20px;
+
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+    }
   `,
   Image: styled.td`
     width: 420px;
     vertical-align: top;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
   `,
   Details: styled.td`
     text-align: left;
+
+    @media (max-width: 768px) {
+      display: block;
+    }
   `,
   ProjectName: styled.div`
     font-weight: bold;
