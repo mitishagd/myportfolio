@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import resume from '../assets/resume.pdf'
 
 const Styled = {
   Container: styled.div`
@@ -16,6 +17,21 @@ const Styled = {
     font-size: 24px;
     margin-bottom: 50px;
   `,
+  ResumeButton: styled.a`
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #10b981;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+
+    &:hover {
+      background-color: #059669;
+    }
+  `,
 }
 
 const aboutText =
@@ -26,6 +42,11 @@ const About = () => {
     <Styled.Container>
       <Styled.Title>About Me</Styled.Title>
       {aboutText}
+      <div>
+        <Styled.ResumeButton href={resume} download="Mitisha_Resume.pdf">
+          Download Resume
+        </Styled.ResumeButton>
+      </div>
     </Styled.Container>
   )
 }

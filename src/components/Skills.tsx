@@ -1,4 +1,7 @@
 import styled from 'styled-components'
+import Slider from 'react-slick'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 
 import {
   DjangoIcon,
@@ -19,6 +22,8 @@ import {
   DockerIcon,
   NodeJSIcon,
   MySQLIcon,
+  OpenAIIcon,
+  AnthropicIcon,
 } from './Icons.tsx'
 
 const Styled = {
@@ -33,30 +38,102 @@ const Styled = {
     font-size: 24px;
     margin-bottom: 80px;
   `,
+  IconWrapper: styled.div`
+    padding: 0 5px;
+    text-align: center;
+  `,
 }
 
 const Skills = () => {
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 1000,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+    ],
+  }
+
   return (
     <Styled.Root>
       <Styled.Title>Skills</Styled.Title>
-      <ReactIcon />
-      <TypeScriptIcon />
-      <JavaScriptIcon />
-      <HTMLIcon />
-      <CSSIcon />
-      <NodeJSIcon />
-      <PythonIcon />
-      <DjangoIcon />
-      <JavaIcon />
-      <SpringBootIcon />
-      <GraphqlIcon />
-      <MySQLIcon />
-      <MongoDBIcon />
-      <JenkinsIcon />
-      <DockerIcon />
-      <GitIcon />
-      <VercelIcon />
-      <AwsIcon />
+      <Slider {...settings}>
+        <Styled.IconWrapper>
+          <ReactIcon />
+        </Styled.IconWrapper>
+        <Styled.IconWrapper>
+          <TypeScriptIcon />
+        </Styled.IconWrapper>
+        <Styled.IconWrapper>
+          <JavaScriptIcon />
+        </Styled.IconWrapper>
+        <Styled.IconWrapper>
+          <HTMLIcon />
+        </Styled.IconWrapper>
+        <Styled.IconWrapper>
+          <CSSIcon />
+        </Styled.IconWrapper>
+        <Styled.IconWrapper>
+          <NodeJSIcon />
+        </Styled.IconWrapper>
+        <Styled.IconWrapper>
+          <PythonIcon />
+        </Styled.IconWrapper>
+        <Styled.IconWrapper>
+          <DjangoIcon />
+        </Styled.IconWrapper>
+        <Styled.IconWrapper>
+          <JavaIcon />
+        </Styled.IconWrapper>
+        <Styled.IconWrapper>
+          <SpringBootIcon />
+        </Styled.IconWrapper>
+        <Styled.IconWrapper>
+          <GraphqlIcon />
+        </Styled.IconWrapper>
+        <Styled.IconWrapper>
+          <MySQLIcon />
+        </Styled.IconWrapper>
+        <Styled.IconWrapper>
+          <MongoDBIcon />
+        </Styled.IconWrapper>
+        <Styled.IconWrapper>
+          <JenkinsIcon />
+        </Styled.IconWrapper>
+        <Styled.IconWrapper>
+          <DockerIcon />
+        </Styled.IconWrapper>
+        <Styled.IconWrapper>
+          <GitIcon />
+        </Styled.IconWrapper>
+        <Styled.IconWrapper>
+          <VercelIcon />
+        </Styled.IconWrapper>
+        <Styled.IconWrapper>
+          <AwsIcon />
+        </Styled.IconWrapper>
+        <Styled.IconWrapper>
+          <OpenAIIcon />
+        </Styled.IconWrapper>
+        <Styled.IconWrapper>
+          <AnthropicIcon />
+        </Styled.IconWrapper>
+      </Slider>
     </Styled.Root>
   )
 }
