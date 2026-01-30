@@ -36,11 +36,7 @@ const Styled = {
   ProfilePicture: styled(ProfilePicture)`
     float: right;
   `,
-  Root: styled.div`
-    @media (max-width: 768px) {
-      padding-top: 80px;
-    }
-  `,
+  Root: styled.div``,
   Name: styled.span`
     color: #10b981;
     margin-left: 0.25em;

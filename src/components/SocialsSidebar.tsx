@@ -13,16 +13,13 @@ const Styled = {
     box-sizing: border-box;
 
     @media (max-width: 768px) {
-      position: fixed;
-      top: 0;
+      position: relative;
       width: 100%;
       height: auto;
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 15px 20px;
-      background: white;
-      z-index: 100;
     }
   `,
   Logo: styled.img`
@@ -75,7 +72,7 @@ const SocialsSidebar = () => {
         <a target="_blank" href="https://medium.com/@mitisha.dodderi">
           <MediumIcon />
         </a>
-        <a target="_blank" href="https://www.goodreads.com/user/show/YOUR_ID">
+        <a target="_blank" href="https://www.goodreads.com/user/show/17540615-mitisha">
           <GoodreadsIcon />
         </a>
       </Styled.Socials>
