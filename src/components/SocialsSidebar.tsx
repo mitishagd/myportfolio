@@ -10,15 +10,19 @@ const Styled = {
     height: 100vh;
     position: fixed;
     left: 0;
+    box-sizing: border-box;
 
     @media (max-width: 768px) {
-      position: relative;
+      position: fixed;
+      top: 0;
       width: 100%;
       height: auto;
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 15px 20px;
+      background: white;
+      z-index: 100;
     }
   `,
   Logo: styled.img`
@@ -65,11 +69,11 @@ const SocialsSidebar = () => {
         <a target="_blank" href="https://github.com/mitishagd">
           <GithubIcon />
         </a>
-        <a target="_blank" href="https://medium.com/@mitisha.dodderi">
-          <MediumIcon />
-        </a>
         <a target="_blank" href="mailto:mitisha.dodderi@gmail.com">
           <EmailIcon />
+        </a>
+        <a target="_blank" href="https://medium.com/@mitisha.dodderi">
+          <MediumIcon />
         </a>
       </Styled.Socials>
     </Styled.Sidebar>

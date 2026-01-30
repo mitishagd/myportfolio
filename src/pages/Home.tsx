@@ -32,7 +32,11 @@ const Styled = {
   ProfilePicture: styled(ProfilePicture)`
     float: right;
   `,
-  Root: styled.div``,
+  Root: styled.div`
+    @media (max-width: 768px) {
+      padding-top: 80px;
+    }
+  `,
 }
 
 const introText = 'Hi, I am Mitisha Ganesha Dodderi.'
@@ -55,9 +59,9 @@ const Home = () => {
         </Styled.Intro>
       </Styled.AboutContainer>
       <About />
-      <Skills />
       <Experience />
       <Projects />
+      <Skills />
       <Footer />
     </Styled.Root>
   )
