@@ -9,6 +9,11 @@ const Styled = {
     width: 65%;
     margin-top: 40px;
     margin-bottom: 40px;
+
+    @media (max-width: 768px) {
+      margin-left: 5%;
+      width: 90%;
+    }
   `,
   Title: styled.h2`
     font-size: 24px;
@@ -21,13 +26,33 @@ const Styled = {
   ProjectCard: styled.tr`
     margin: 5px 20px;
     padding: 5px 20px;
+
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+    }
   `,
   Image: styled.td`
     width: 420px;
     vertical-align: top;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
   `,
   Details: styled.td`
     text-align: left;
+
+    @media (max-width: 768px) {
+      display: block;
+    }
   `,
   ProjectName: styled.div`
     font-weight: bold;
@@ -48,7 +73,7 @@ const Styled = {
     padding: 8px 30px;
     border: 1px solid #000;
     font-size: 14px;
-    color: #333;
+    color: #10b981;
   `,
   Github: styled(FaGithub)`
     margin-right: 8px;
@@ -66,9 +91,7 @@ const Projects = () => {
         <table>
           <Styled.ProjectCard>
             <Styled.Image>
-              <a target="_blank" href="">
-                <img src={cartoonGeneratorGif} alt="Project Screenshot" width="350" />
-              </a>
+              <img src={cartoonGeneratorGif} alt="Project Screenshot" width="350" />
             </Styled.Image>
             <Styled.Details>
               <Styled.ProjectName>Cartoon Generator</Styled.ProjectName>

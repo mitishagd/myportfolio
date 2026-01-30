@@ -6,6 +6,11 @@ const Styled = {
     margin-left: 17%;
     width: 65%;
     margin-bottom: 40px;
+
+    @media (max-width: 768px) {
+      margin-left: 5%;
+      width: 90%;
+    }
   `,
   Title: styled.h2`
     font-size: 24px;
@@ -18,16 +23,33 @@ const Styled = {
   Position: styled.div`
     margin: 5px 20px;
     padding: 5px 20px;
+
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 30px;
+    }
   `,
   Company: styled.a`
     font-style: italic;
-    color: grey;
+    color: #10b981;
+    font-weight: normal;
   `,
-  Role: styled.div``,
+  Role: styled.div`
+    font-weight: bold;
+  `,
   Duration: styled.td`
     font-weight: normal;
     min-width: 200px;
     vertical-align: top;
+
+    @media (max-width: 768px) {
+      display: block;
+      min-width: auto;
+      font-size: 14px;
+      color: grey;
+      margin-bottom: 5px;
+    }
   `,
   Description: styled.ul`
     text-align: left;
@@ -48,7 +70,6 @@ const Experience = () => {
             <Styled.Duration>July 2023 - Sept 2023</Styled.Duration>
             <Styled.RoleAndDescription>
               <Styled.Role>
-                {' '}
                 Software Development Engineer II,{' '}
                 <Styled.Company target="_blank" href="https://www.98point6.com/">
                   98point6 Technologies Inc.

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { FaGoodreads } from 'react-icons/fa'
 
 import email from '../assets/icons/email.svg'
 import github from '../assets/icons/github.svg'
@@ -51,6 +52,10 @@ export function MediumIcon(props: { size?: number; className?: string }) {
 
 export function EmailIcon(props: { size?: number; className?: string }) {
   return <Styled.SocialIcon src={email} alt="" {...props} />
+}
+
+export function GoodreadsIcon() {
+  return <FaGoodreads size={25} style={{ padding: '5px', color: '#000' }} />
 }
 
 export function AwsIcon(props: { size?: number; className?: string }) {

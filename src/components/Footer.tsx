@@ -11,7 +11,7 @@ const Styled = {
 const Footer = () => {
   return (
     <Styled.FooterContainer>
-      <p>© Mitisha Ganesha Dodderi. All rights reserved.</p>
+      <p>© 2026 Mitisha Ganesha Dodderi. All rights reserved.</p>
     </Styled.FooterContainer>
   )
 }
