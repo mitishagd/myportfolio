@@ -59,20 +59,19 @@ const SocialsSidebar = () => {
       <Styled.Logo src={logo} alt="Logo" />
 
       <Styled.Socials>
-        <a target="_blank" href="https://www.linkedin.com/in/mitisha-dodderi/">
+        <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/mitisha-dodderi/">
           <LinkedInIcon />
         </a>
-
-        <a target="_blank" href="https://github.com/mitishagd">
+        <a target="_blank" rel="noreferrer" href="https://github.com/mitishagd">
           <GithubIcon />
         </a>
-        <a target="_blank" href="mailto:mitisha.dodderi@gmail.com">
+        <a target="_blank" rel="noreferrer" href="mailto:mitisha.dodderi@gmail.com">
           <EmailIcon />
         </a>
-        <a target="_blank" href="https://medium.com/@mitisha.dodderi">
+        <a target="_blank" rel="noreferrer" href="https://medium.com/@mitisha.dodderi">
           <MediumIcon />
         </a>
-        <a target="_blank" href="https://www.goodreads.com/user/show/17540615-mitisha">
+        <a target="_blank" rel="noreferrer" href="https://www.goodreads.com/user/show/17540615-mitisha">
           <GoodreadsIcon />
         </a>
       </Styled.Socials>

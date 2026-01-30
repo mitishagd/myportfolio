@@ -91,9 +91,7 @@ const Projects = () => {
         <table>
           <Styled.ProjectCard>
             <Styled.Image>
-              <a target="_blank" href="">
-                <img src={cartoonGeneratorGif} alt="Project Screenshot" width="350" />
-              </a>
+              <img src={cartoonGeneratorGif} alt="Project Screenshot" width="350" />
             </Styled.Image>
             <Styled.Details>
               <Styled.ProjectName>Cartoon Generator</Styled.ProjectName>
