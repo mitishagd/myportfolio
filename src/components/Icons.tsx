@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { FaGoodreads } from 'react-icons/fa'
+import { SiOpenai, SiAnthropic } from 'react-icons/si'
 
 import email from '../assets/icons/email.svg'
 import github from '../assets/icons/github.svg'
@@ -132,4 +133,12 @@ export function HTMLIcon(props: { size?: number; className?: string }) {
 
 export function CSSIcon(props: { size?: number; className?: string }) {
   return <Styled.SkillsIcon src={css} alt="" {...props} />
+}
+
+export function OpenAIIcon() {
+  return <SiOpenai size={50} style={{ padding: '5px' }} />
+}
+
+export function AnthropicIcon() {
+  return <SiAnthropic size={50} style={{ padding: '5px' }} />
 }

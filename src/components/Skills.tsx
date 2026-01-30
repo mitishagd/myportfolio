@@ -22,6 +22,8 @@ import {
   DockerIcon,
   NodeJSIcon,
   MySQLIcon,
+  OpenAIIcon,
+  AnthropicIcon,
 } from './Icons.tsx'
 
 const Styled = {
@@ -124,6 +126,12 @@ const Skills = () => {
         </Styled.IconWrapper>
         <Styled.IconWrapper>
           <AwsIcon />
+        </Styled.IconWrapper>
+        <Styled.IconWrapper>
+          <OpenAIIcon />
+        </Styled.IconWrapper>
+        <Styled.IconWrapper>
+          <AnthropicIcon />
         </Styled.IconWrapper>
       </Slider>
     </Styled.Root>
