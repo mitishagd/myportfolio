@@ -9,6 +9,11 @@ const Styled = {
     width: 65%;
     margin-top: 40px;
     margin-bottom: 40px;
+
+    @media (max-width: 768px) {
+      margin-left: 5%;
+      width: 90%;
+    }
   `,
   Title: styled.h2`
     font-size: 24px;

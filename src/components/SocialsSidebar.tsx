@@ -10,19 +10,45 @@ const Styled = {
     height: 100vh;
     position: fixed;
     left: 0;
+
+    @media (max-width: 768px) {
+      position: relative;
+      width: 100%;
+      height: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 20px;
+    }
   `,
   Logo: styled.img`
     height: 85px;
     width: 85px;
+
+    @media (max-width: 768px) {
+      height: 50px;
+      width: 50px;
+    }
   `,
   Socials: styled.div`
-    display: block;
+    display: flex;
+    flex-direction: column;
     padding: 20px;
-    width: 60px;
-    height: 100vh;
     position: fixed;
     left: 0;
     top: 50%;
+
+    @media (max-width: 768px) {
+      position: relative;
+      width: auto;
+      height: auto;
+      display: flex;
+      flex-direction: row;
+      top: 0;
+      gap: 8px;
+      padding: 0;
+      flex-shrink: 0;
+    }
   `,
 }
 
@@ -33,17 +59,17 @@ const SocialsSidebar = () => {
 
       <Styled.Socials>
         <a target="_blank" href="https://www.linkedin.com/in/mitisha-dodderi/">
-          <LinkedInIcon size={30} />
+          <LinkedInIcon />
         </a>
 
         <a target="_blank" href="https://github.com/mitishagd">
-          <GithubIcon size={30} />
+          <GithubIcon />
         </a>
         <a target="_blank" href="https://medium.com/@mitisha.dodderi">
-          <MediumIcon size={30} />
+          <MediumIcon />
         </a>
         <a target="_blank" href="mailto:mitisha.dodderi@gmail.com">
-          <EmailIcon size={30} />
+          <EmailIcon />
         </a>
       </Styled.Socials>
     </Styled.Sidebar>

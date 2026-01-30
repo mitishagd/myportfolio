@@ -6,6 +6,11 @@ const Styled = {
     margin-left: 17%;
     width: 65%;
     margin-bottom: 40px;
+
+    @media (max-width: 768px) {
+      margin-left: 5%;
+      width: 90%;
+    }
   `,
   Title: styled.h2`
     font-size: 24px;
@@ -28,6 +33,10 @@ const Styled = {
     font-weight: normal;
     min-width: 200px;
     vertical-align: top;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
   `,
   Description: styled.ul`
     text-align: left;
