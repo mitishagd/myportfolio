@@ -33,8 +33,11 @@ const Styled = {
   Company: styled.a`
     font-style: italic;
     color: grey;
+    font-weight: normal;
   `,
-  Role: styled.div``,
+  Role: styled.div`
+    font-weight: bold;
+  `,
   Duration: styled.td`
     font-weight: normal;
     min-width: 200px;
@@ -67,7 +70,6 @@ const Experience = () => {
             <Styled.Duration>July 2023 - Sept 2023</Styled.Duration>
             <Styled.RoleAndDescription>
               <Styled.Role>
-                {' '}
                 Software Development Engineer II,{' '}
                 <Styled.Company target="_blank" href="https://www.98point6.com/">
                   98point6 Technologies Inc.

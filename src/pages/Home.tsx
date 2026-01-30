@@ -59,9 +59,9 @@ const Home = () => {
         </Styled.Intro>
       </Styled.AboutContainer>
       <About />
+      <Skills />
       <Experience />
       <Projects />
-      <Skills />
       <Footer />
     </Styled.Root>
   )
