@@ -31,10 +31,14 @@ const Styled = {
     padding: 5px;
   `,
   SkillsIcon: styled.img<{ size?: number; _isScale?: boolean }>`
-    width: 75px;
-    height: 75px;
-    margin: 10px;
+    width: 50px;
+    height: 50px;
     padding: 5px;
+
+    @media (max-width: 480px) {
+      width: 40px;
+      height: 40px;
+    }
   `,
 }
 
