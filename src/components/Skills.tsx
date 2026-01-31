@@ -13,6 +13,7 @@ import {
   CSSIcon,
   GitIcon,
   VercelIcon,
+  ViteIcon,
   AwsIcon,
   JavaIcon,
   SpringBootIcon,
@@ -90,6 +91,9 @@ const Skills = () => {
         </Styled.IconWrapper>
         <Styled.IconWrapper>
           <NodeJSIcon />
+        </Styled.IconWrapper>
+        <Styled.IconWrapper>
+          <ViteIcon />
         </Styled.IconWrapper>
         <Styled.IconWrapper>
           <PythonIcon />

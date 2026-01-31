@@ -1,144 +1,260 @@
 import styled from 'styled-components'
-import { FaGoodreads } from 'react-icons/fa'
-import { SiOpenai, SiAnthropic } from 'react-icons/si'
-
-import email from '../assets/icons/email.svg'
-import github from '../assets/icons/github.svg'
-import linkedin from '../assets/icons/linkedin.svg'
-import medium from '../assets/icons/medium.svg'
-import aws from '../assets/icons/aws.svg'
-import docker from '../assets/icons/docker.svg'
-import django from '../assets/icons/django.svg'
-import graphql from '../assets/icons/graphql.svg'
-import javascript from '../assets/icons/javascript.svg'
-import mongodb from '../assets/icons/mongodb.svg'
-import mysql from '../assets/icons/mysql.svg'
-import nodejs from '../assets/icons/nodejs.svg'
-import python from '../assets/icons/python.svg'
-import react from '../assets/icons/react.svg'
-import typescript from '../assets/icons/typescript.svg'
-import java from '../assets/icons/java.svg'
-import jenkins from '../assets/icons/jenkins.svg'
-import git from '../assets/icons/git.svg'
-import springboot from '../assets/icons/springboot.svg'
-import vercel from '../assets/icons/vercel.svg'
-import html from '../assets/icons/html.svg'
-import css from '../assets/icons/css.svg'
+import { FaGoodreads, FaJava, FaGithub, FaLinkedin, FaMedium, FaEnvelope } from 'react-icons/fa'
+import {
+  SiReact,
+  SiTypescript,
+  SiJavascript,
+  SiHtml5,
+  SiCss3,
+  SiNodedotjs,
+  SiPython,
+  SiDjango,
+  SiSpringboot,
+  SiGraphql,
+  SiMysql,
+  SiMongodb,
+  SiJenkins,
+  SiDocker,
+  SiGit,
+  SiVercel,
+  SiAmazon,
+  SiOpenai,
+  SiAnthropic,
+  SiVite,
+} from 'react-icons/si'
 
 const Styled = {
-  SocialIcon: styled.img<{ size?: number; _isScale?: boolean }>`
-    width: 25px;
-    height: 25px;
-    padding: 5px;
-  `,
-  SkillsIcon: styled.img<{ size?: number; _isScale?: boolean }>`
-    width: 50px;
-    height: 50px;
+  SocialIcon: styled.div`
+    display: inline-block;
     padding: 5px;
 
+    svg {
+      width: 25px;
+      height: 25px;
+    }
+  `,
+  SkillsIcon: styled.div`
+    display: inline-block;
+    padding: 5px;
+
+    svg {
+      width: 50px;
+      height: 50px;
+    }
+
     @media (max-width: 480px) {
-      width: 40px;
-      height: 40px;
+      svg {
+        width: 40px;
+        height: 40px;
+      }
     }
   `,
 }
 
-export function LinkedInIcon(props: { size?: number; className?: string }) {
-  return <Styled.SocialIcon src={linkedin} alt="" {...props} />
+export function LinkedInIcon() {
+  return (
+    <Styled.SocialIcon>
+      <FaLinkedin color="black" />
+    </Styled.SocialIcon>
+  )
 }
 
-export function GithubIcon(props: { size?: number; className?: string }) {
-  return <Styled.SocialIcon src={github} alt="" {...props} />
+export function GithubIcon() {
+  return (
+    <Styled.SocialIcon>
+      <FaGithub color="#000" />
+    </Styled.SocialIcon>
+  )
 }
 
-export function MediumIcon(props: { size?: number; className?: string }) {
-  return <Styled.SocialIcon src={medium} alt="" {...props} />
+export function MediumIcon() {
+  return (
+    <Styled.SocialIcon>
+      <FaMedium color="#000" />
+    </Styled.SocialIcon>
+  )
 }
 
-export function EmailIcon(props: { size?: number; className?: string }) {
-  return <Styled.SocialIcon src={email} alt="" {...props} />
+export function EmailIcon() {
+  return (
+    <Styled.SocialIcon>
+      <FaEnvelope color="#000" style={{ width: '23px', height: '23px' }} />
+    </Styled.SocialIcon>
+  )
 }
 
 export function GoodreadsIcon() {
-  return <FaGoodreads size={25} style={{ padding: '5px', color: '#000' }} />
+  return (
+    <Styled.SocialIcon>
+      <FaGoodreads color="#000" />
+    </Styled.SocialIcon>
+  )
 }
 
-export function AwsIcon(props: { size?: number; className?: string }) {
-  return <Styled.SkillsIcon src={aws} alt="" {...props} />
+export function ReactIcon() {
+  return (
+    <Styled.SkillsIcon>
+      <SiReact color="#61DAFB" />
+    </Styled.SkillsIcon>
+  )
 }
 
-export function DockerIcon(props: { size?: number; className?: string }) {
-  return <Styled.SkillsIcon src={docker} alt="" {...props} />
+export function TypeScriptIcon() {
+  return (
+    <Styled.SkillsIcon>
+      <SiTypescript color="#3178C6" />
+    </Styled.SkillsIcon>
+  )
 }
 
-export function DjangoIcon(props: { size?: number; className?: string }) {
-  return <Styled.SkillsIcon src={django} alt="" {...props} />
+export function JavaScriptIcon() {
+  return (
+    <Styled.SkillsIcon>
+      <SiJavascript color="#F7DF1E" />
+    </Styled.SkillsIcon>
+  )
 }
 
-export function GraphqlIcon(props: { size?: number; className?: string }) {
-  return <Styled.SkillsIcon src={graphql} alt="" {...props} />
+export function HTMLIcon() {
+  return (
+    <Styled.SkillsIcon>
+      <SiHtml5 color="#E34F26" />
+    </Styled.SkillsIcon>
+  )
 }
 
-export function JavaScriptIcon(props: { size?: number; className?: string }) {
-  return <Styled.SkillsIcon src={javascript} alt="" {...props} />
+export function CSSIcon() {
+  return (
+    <Styled.SkillsIcon>
+      <SiCss3 color="#1572B6" />
+    </Styled.SkillsIcon>
+  )
 }
 
-export function MongoDBIcon(props: { size?: number; className?: string }) {
-  return <Styled.SkillsIcon src={mongodb} alt="" {...props} />
+export function NodeJSIcon() {
+  return (
+    <Styled.SkillsIcon>
+      <SiNodedotjs color="#339933" />
+    </Styled.SkillsIcon>
+  )
 }
 
-export function MySQLIcon(props: { size?: number; className?: string }) {
-  return <Styled.SkillsIcon src={mysql} alt="" {...props} />
+export function PythonIcon() {
+  return (
+    <Styled.SkillsIcon>
+      <SiPython color="#3776AB" />
+    </Styled.SkillsIcon>
+  )
 }
 
-export function NodeJSIcon(props: { size?: number; className?: string }) {
-  return <Styled.SkillsIcon src={nodejs} alt="" {...props} />
+export function DjangoIcon() {
+  return (
+    <Styled.SkillsIcon>
+      <SiDjango color="#092E20" />
+    </Styled.SkillsIcon>
+  )
 }
 
-export function PythonIcon(props: { size?: number; className?: string }) {
-  return <Styled.SkillsIcon src={python} alt="" {...props} />
+export function JavaIcon() {
+  return (
+    <Styled.SkillsIcon>
+      <FaJava color="#007396" />
+    </Styled.SkillsIcon>
+  )
 }
 
-export function ReactIcon(props: { size?: number; className?: string }) {
-  return <Styled.SkillsIcon src={react} alt="" {...props} />
+export function SpringBootIcon() {
+  return (
+    <Styled.SkillsIcon>
+      <SiSpringboot color="#6DB33F" />
+    </Styled.SkillsIcon>
+  )
 }
 
-export function TypeScriptIcon(props: { size?: number; className?: string }) {
-  return <Styled.SkillsIcon src={typescript} alt="" {...props} />
+export function GraphqlIcon() {
+  return (
+    <Styled.SkillsIcon>
+      <SiGraphql color="#E10098" />
+    </Styled.SkillsIcon>
+  )
 }
 
-export function JavaIcon(props: { size?: number; className?: string }) {
-  return <Styled.SkillsIcon src={java} alt="" {...props} />
+export function MySQLIcon() {
+  return (
+    <Styled.SkillsIcon>
+      <SiMysql color="#4479A1" />
+    </Styled.SkillsIcon>
+  )
 }
 
-export function JenkinsIcon(props: { size?: number; className?: string }) {
-  return <Styled.SkillsIcon src={jenkins} alt="" {...props} />
+export function MongoDBIcon() {
+  return (
+    <Styled.SkillsIcon>
+      <SiMongodb color="#47A248" />
+    </Styled.SkillsIcon>
+  )
 }
 
-export function GitIcon(props: { size?: number; className?: string }) {
-  return <Styled.SkillsIcon src={git} alt="" {...props} />
+export function JenkinsIcon() {
+  return (
+    <Styled.SkillsIcon>
+      <SiJenkins color="#D24939" />
+    </Styled.SkillsIcon>
+  )
 }
 
-export function SpringBootIcon(props: { size?: number; className?: string }) {
-  return <Styled.SkillsIcon src={springboot} alt="" {...props} />
+export function DockerIcon() {
+  return (
+    <Styled.SkillsIcon>
+      <SiDocker color="#2496ED" />
+    </Styled.SkillsIcon>
+  )
 }
 
-export function VercelIcon(props: { size?: number; className?: string }) {
-  return <Styled.SkillsIcon src={vercel} alt="" {...props} />
+export function GitIcon() {
+  return (
+    <Styled.SkillsIcon>
+      <SiGit color="#F05032" />
+    </Styled.SkillsIcon>
+  )
 }
 
-export function HTMLIcon(props: { size?: number; className?: string }) {
-  return <Styled.SkillsIcon src={html} alt="" {...props} />
+export function VercelIcon() {
+  return (
+    <Styled.SkillsIcon>
+      <SiVercel color="#000000" />
+    </Styled.SkillsIcon>
+  )
 }
 
-export function CSSIcon(props: { size?: number; className?: string }) {
-  return <Styled.SkillsIcon src={css} alt="" {...props} />
+export function AwsIcon() {
+  return (
+    <Styled.SkillsIcon>
+      <SiAmazon color="#FF9900" />
+    </Styled.SkillsIcon>
+  )
 }
 
 export function OpenAIIcon() {
-  return <SiOpenai size={50} style={{ padding: '5px' }} />
+  return (
+    <Styled.SkillsIcon>
+      <SiOpenai color="#412991" />
+    </Styled.SkillsIcon>
+  )
 }
 
 export function AnthropicIcon() {
-  return <SiAnthropic size={50} style={{ padding: '5px' }} />
+  return (
+    <Styled.SkillsIcon>
+      <SiAnthropic color="#191919" />
+    </Styled.SkillsIcon>
+  )
+}
+
+export function ViteIcon() {
+  return (
+    <Styled.SkillsIcon>
+      <SiVite color="#646CFF" />
+    </Styled.SkillsIcon>
+  )
 }
