@@ -5,13 +5,15 @@ const Styled = {
   Container: styled.div`
     text-align: center;
     font-size: 16px;
-    margin: auto;
+    margin: 0 auto;
+    margin-top: 50px;
     padding: 40px;
     line-height: 1.6;
     white-space: pre-line;
     max-width: 600px;
     font-weight: normal;
     height: 100%;
+    scroll-margin-top: 100px;
   `,
   Title: styled.h2`
     font-size: 24px;
@@ -39,7 +41,7 @@ const aboutText =
 
 const About = () => {
   return (
-    <Styled.Container>
+    <Styled.Container id="about">
       <Styled.Title>About Me</Styled.Title>
       {aboutText}
       <div>

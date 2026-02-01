@@ -9,6 +9,7 @@ const Styled = {
     width: 65%;
     margin-top: 40px;
     margin-bottom: 40px;
+    scroll-margin-top: 100px;
 
     @media (max-width: 768px) {
       margin-left: 5%;
@@ -90,7 +91,7 @@ const Styled = {
 
 const Projects = () => {
   return (
-    <Styled.Root>
+    <Styled.Root id="projects">
       <Styled.Title>Projects</Styled.Title>
       <Styled.Content>
         <Styled.ProjectCard>

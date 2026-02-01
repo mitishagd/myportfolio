@@ -6,6 +6,7 @@ const Styled = {
     margin-left: 17%;
     width: 65%;
     margin-bottom: 40px;
+    scroll-margin-top: 100px;
 
     @media (max-width: 768px) {
       margin-left: 5%;
@@ -62,7 +63,7 @@ const Styled = {
 
 const Experience = () => {
   return (
-    <Styled.Root>
+    <Styled.Root id="experience">
       <Styled.Title>Experience</Styled.Title>
       <Styled.Content>
         <table>

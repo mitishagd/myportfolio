@@ -3,7 +3,7 @@ import Typewriter from 'typewriter-effect'
 
 import About from '../components/About.tsx'
 import ProfilePicture from '../components/ProfilePicture.tsx'
-import SocialsSidebar from '../components/SocialsSidebar.tsx'
+import SocialLinksSidebar from '../components/SocialLinks.tsx'
 import Experience from '../components/Experience.tsx'
 import Skills from '../components/Skills.tsx'
 import Footer from '../components/Footer.tsx'
@@ -11,20 +11,22 @@ import NavBar from '../components/NavBar.tsx'
 import Projects from '../components/Projects.tsx'
 
 const Styled = {
-  SocialsSidebar: styled(SocialsSidebar)``,
+  SocialLinksSidebar: styled(SocialLinksSidebar)``,
   AboutContainer: styled.div`
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 10%;
-    min-height: 100vh;
-    padding: 20px;
+    height: 100vh;
+    margin-top: -90px;
+    padding-top: 90px;
+    box-sizing: border-box;
 
     @media (max-width: 768px) {
       flex-direction: column;
-      min-height: auto;
-      padding: 40px 20px;
+      margin-top: -70px;
+      padding-top: 70px;
     }
   `,
   Intro: styled.div`
@@ -65,7 +67,7 @@ const Home = () => {
   return (
     <Styled.Root>
       <NavBar />
-      <Styled.SocialsSidebar />
+      <Styled.SocialLinksSidebar />
       <Styled.AboutContainer>
         <Styled.ProfilePicture />
         <Styled.Intro>
