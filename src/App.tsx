@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Analytics } from '@vercel/analytics/react'
 import WorkInProgress from './pages/WorkInProgress.tsx'
 import Home from './pages/Home.tsx'
 
@@ -14,7 +15,10 @@ const isWorkInProgress = false
 
 const App = () => {
   return (
-    <Styled.AppContainer>{isWorkInProgress ? <WorkInProgress /> : <Home />}</Styled.AppContainer>
+    <Styled.AppContainer>
+      {isWorkInProgress ? <WorkInProgress /> : <Home />}
+      <Analytics />
+    </Styled.AppContainer>
   )
 }
 
