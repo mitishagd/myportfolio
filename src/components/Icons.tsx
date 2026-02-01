@@ -21,6 +21,9 @@ import {
   SiOpenai,
   SiAnthropic,
   SiVite,
+  SiJira,
+  SiNotion,
+  SiSumologic,
 } from 'react-icons/si'
 
 const Styled = {
@@ -255,6 +258,30 @@ export function ViteIcon() {
   return (
     <Styled.SkillsIcon>
       <SiVite color="#646CFF" />
+    </Styled.SkillsIcon>
+  )
+}
+
+export function JiraIcon() {
+  return (
+    <Styled.SkillsIcon>
+      <SiJira color="#0052CC" />
+    </Styled.SkillsIcon>
+  )
+}
+
+export function NotionIcon() {
+  return (
+    <Styled.SkillsIcon>
+      <SiNotion color="#000000" />
+    </Styled.SkillsIcon>
+  )
+}
+
+export function SumologicIcon() {
+  return (
+    <Styled.SkillsIcon>
+      <SiSumologic color="#000099" />
     </Styled.SkillsIcon>
   )
 }

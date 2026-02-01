@@ -23,6 +23,9 @@ import {
   DockerIcon,
   NodeJSIcon,
   MySQLIcon,
+  JiraIcon,
+  NotionIcon,
+  SumologicIcon,
   OpenAIIcon,
   AnthropicIcon,
 } from './Icons.tsx'
@@ -127,6 +130,15 @@ const Skills = () => {
         </Styled.IconWrapper>
         <Styled.IconWrapper>
           <VercelIcon />
+        </Styled.IconWrapper>
+        <Styled.IconWrapper>
+          <JiraIcon />
+        </Styled.IconWrapper>
+        <Styled.IconWrapper>
+          <NotionIcon />
+        </Styled.IconWrapper>
+        <Styled.IconWrapper>
+          <SumologicIcon />
         </Styled.IconWrapper>
         <Styled.IconWrapper>
           <AwsIcon />
