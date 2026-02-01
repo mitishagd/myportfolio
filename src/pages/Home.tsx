@@ -17,19 +17,31 @@ const Styled = {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow-y: auto;
     margin: 0 10%;
-  `,
-  Intro: styled.div<{}>`
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 22px;
+    min-height: 100vh;
+    padding: 20px;
 
     @media (max-width: 768px) {
       flex-direction: column;
+      min-height: auto;
+      padding: 40px 20px;
+    }
+  `,
+  Intro: styled.div`
+    width: 100%;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    text-align: center;
+    padding: 20px;
+
+    @media (max-width: 768px) {
+      font-size: 18px;
+      padding: 10px;
+      min-height: 200px;
     }
   `,
   ProfilePicture: styled(ProfilePicture)`
