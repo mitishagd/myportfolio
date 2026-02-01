@@ -13,6 +13,7 @@ import {
   CSSIcon,
   GitIcon,
   VercelIcon,
+  ViteIcon,
   AwsIcon,
   JavaIcon,
   SpringBootIcon,
@@ -22,6 +23,9 @@ import {
   DockerIcon,
   NodeJSIcon,
   MySQLIcon,
+  JiraIcon,
+  NotionIcon,
+  SumologicIcon,
   OpenAIIcon,
   AnthropicIcon,
 } from './Icons.tsx'
@@ -92,6 +96,9 @@ const Skills = () => {
           <NodeJSIcon />
         </Styled.IconWrapper>
         <Styled.IconWrapper>
+          <ViteIcon />
+        </Styled.IconWrapper>
+        <Styled.IconWrapper>
           <PythonIcon />
         </Styled.IconWrapper>
         <Styled.IconWrapper>
@@ -123,6 +130,15 @@ const Skills = () => {
         </Styled.IconWrapper>
         <Styled.IconWrapper>
           <VercelIcon />
+        </Styled.IconWrapper>
+        <Styled.IconWrapper>
+          <JiraIcon />
+        </Styled.IconWrapper>
+        <Styled.IconWrapper>
+          <NotionIcon />
+        </Styled.IconWrapper>
+        <Styled.IconWrapper>
+          <SumologicIcon />
         </Styled.IconWrapper>
         <Styled.IconWrapper>
           <AwsIcon />

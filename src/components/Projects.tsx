@@ -23,18 +23,25 @@ const Styled = {
     font-size: 16px;
     line-height: 1.5;
   `,
-  ProjectCard: styled.tr`
-    margin: 5px 20px;
-    padding: 5px 20px;
+  ProjectCard: styled.div`
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 
     @media (max-width: 768px) {
-      display: flex;
       flex-direction: column;
     }
   `,
-  Image: styled.td`
+  Image: styled.div`
     width: 420px;
-    vertical-align: top;
+    flex-shrink: 0;
 
     @media (max-width: 768px) {
       width: 100%;
@@ -45,14 +52,12 @@ const Styled = {
     img {
       max-width: 100%;
       height: auto;
+      border-radius: 8px;
     }
   `,
-  Details: styled.td`
+  Details: styled.div`
     text-align: left;
-
-    @media (max-width: 768px) {
-      display: block;
-    }
+    flex: 1;
   `,
   ProjectName: styled.div`
     font-weight: bold;
@@ -88,38 +93,36 @@ const Projects = () => {
     <Styled.Root>
       <Styled.Title>Projects</Styled.Title>
       <Styled.Content>
-        <table>
-          <Styled.ProjectCard>
-            <Styled.Image>
-              <img src={cartoonGeneratorGif} alt="Project Screenshot" width="350" />
-            </Styled.Image>
-            <Styled.Details>
-              <Styled.ProjectName>Cartoon Generator</Styled.ProjectName>
-              <Styled.Description>
-                A full-stack application that generates cartoon-style images from user text
-                descriptions. Built with React and TypeScript on the frontend, it communicates with
-                a serverless AWS Lambda backend that integrates with OpenAI's DALL-E 3 API to create
-                custom cartoon illustrations in real-time.
-                <Styled.Links>
-                  <Styled.LinkButton
-                    href="https://github.com/mitishagd/CartoonGenerator"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Styled.Github /> Code
-                  </Styled.LinkButton>
-                  <Styled.LinkButton
-                    href="https://cartoon-generator-five.vercel.app/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Styled.ExternalLink /> Demo
-                  </Styled.LinkButton>
-                </Styled.Links>
-              </Styled.Description>
-            </Styled.Details>
-          </Styled.ProjectCard>
-        </table>
+        <Styled.ProjectCard>
+          <Styled.Image>
+            <img src={cartoonGeneratorGif} alt="Project Screenshot" width="350" />
+          </Styled.Image>
+          <Styled.Details>
+            <Styled.ProjectName>Cartoon Generator</Styled.ProjectName>
+            <Styled.Description>
+              A full-stack application that generates cartoon-style images from user text
+              descriptions. Built with React and TypeScript on the frontend, it communicates with a
+              serverless AWS Lambda backend that integrates with OpenAI's DALL-E 3 API to create
+              custom cartoon illustrations in real-time.
+              <Styled.Links>
+                <Styled.LinkButton
+                  href="https://github.com/mitishagd/CartoonGenerator"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Styled.Github /> Code
+                </Styled.LinkButton>
+                <Styled.LinkButton
+                  href="https://cartoon-generator-five.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Styled.ExternalLink /> Demo
+                </Styled.LinkButton>
+              </Styled.Links>
+            </Styled.Description>
+          </Styled.Details>
+        </Styled.ProjectCard>
       </Styled.Content>
     </Styled.Root>
   )
