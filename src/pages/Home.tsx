@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import styled from 'styled-components'
+import Typewriter from 'typewriter-effect'
 
 import About from '../components/About.tsx'
 import ProfilePicture from '../components/ProfilePicture.tsx'
@@ -20,14 +21,13 @@ const Styled = {
     overflow-y: auto;
     margin: 0 10%;
   `,
-  Intro: styled.div<{ _isHovered: boolean }>`
+  Intro: styled.div<{}>`
     width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: ${({ _isHovered }) => (_isHovered ? '20px' : '22px')};
-    animation: ${({ _isHovered }) => !_isHovered && 'fadeIn 0.5s forwards'};
+    font-size: 22px;
 
     @media (max-width: 768px) {
       flex-direction: column;
@@ -51,25 +51,27 @@ const Styled = {
 const bioText = 'Software Engineer | Passionate about tech improving lives | Dog Mom | Avid reader'
 
 const Home = () => {
-  const [isHovered, setIsHovered] = useState(false)
   return (
     <Styled.Root>
       <NavBar />
       <Styled.SocialsSidebar />
       <Styled.AboutContainer>
         <Styled.ProfilePicture />
-        <Styled.Intro
-          _isHovered={isHovered}
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-        >
-          {isHovered ? (
-            bioText
-          ) : (
-            <>
-              Hi, I am <Styled.Name>Mitisha Ganesha Dodderi</Styled.Name>
-            </>
-          )}
+        <Styled.Intro>
+          <Typewriter
+            onInit={(typewriter) => {
+              typewriter
+                .typeString('Hi, I am ')
+                .typeString('<span style="color: #10b981;">Mitisha Ganesha Dodderi</span>')
+                .typeString('.<br/><br/>')
+                .typeString('<span style="font-size: 18px;">' + bioText + '</span>')
+                .start()
+            }}
+            options={{
+              delay: 80,
+              cursor: '|',
+            }}
+          />
         </Styled.Intro>
       </Styled.AboutContainer>
       <About />
