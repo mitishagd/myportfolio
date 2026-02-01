@@ -37,6 +37,7 @@ const Styled = {
     width: 70%;
     height: 100%;
     margin-bottom: 100px;
+    scroll-margin-top: 100px;
   `,
   Title: styled.h2`
     font-size: 24px;
@@ -74,7 +75,7 @@ const Skills = () => {
   }
 
   return (
-    <Styled.Root>
+    <Styled.Root id="skills">
       <Styled.Title>Skills</Styled.Title>
       <Slider {...settings}>
         <Styled.IconWrapper>
