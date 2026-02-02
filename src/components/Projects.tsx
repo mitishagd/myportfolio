@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import cartoonGeneratorGif from '../assets/gifs/cartoon-generator.gif'
 import { profileData } from '../config/profileData'
+import { SecondaryButton } from './Button'
 import VisuallyHidden from './VisuallyHidden'
 
 const Styled = {
@@ -74,15 +75,9 @@ const Styled = {
     justify-content: left;
     align-items: center;
   `,
-  LinkButton: styled.a`
-    display: inline-flex;
-    align-items: center;
+  LinkButton: styled(SecondaryButton)`
     margin-right: 10px;
     margin-top: 10px;
-    padding: 8px 30px;
-    border: 1px solid #000;
-    font-size: 14px;
-    color: ${({ theme }) => theme.primary};
   `,
   Github: styled(FaGithub)`
     margin-right: ${({ theme }) => theme.spacing.xs};

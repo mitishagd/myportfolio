@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 import resume from '../assets/resume.pdf'
 import { profileData } from '../config/profileData'
+import { PrimaryButton } from './Button'
 
 const Styled = {
   Root: styled.section`
@@ -24,20 +25,9 @@ const Styled = {
     font-size: 26px;
     margin-bottom: ${({ theme }) => theme.spacing.lg};
   `,
-  ResumeButton: styled.a`
-    display: inline-block;
-    padding: 8px 16px;
-    font-size: 14px;
-    background-color: ${({ theme }) => theme.secondary};
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
+  ResumeButton: styled(PrimaryButton)`
     margin-top: 20px;
     margin-bottom: 50px;
-
-    &:hover {
-      filter: brightness(1.2);
-    }
   `,
 }
 
