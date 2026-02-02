@@ -3,6 +3,7 @@ import styled, { ThemeProvider } from 'styled-components'
 import { Analytics } from '@vercel/analytics/react'
 import WorkInProgress from './pages/WorkInProgress.tsx'
 import Home from './pages/Home.tsx'
+import CursorHalo from './components/CursorHalo.tsx'
 import { lightTheme, darkTheme } from './theme/theme'
 import { ThemeContext } from './theme/ThemeContext'
 
@@ -35,6 +36,7 @@ const App = () => {
     <ThemeContext.Provider value={{ isDarkMode, toggleTheme }}>
       <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
         <Styled.AppContainer>
+          <CursorHalo />
           {isWorkInProgress ? <WorkInProgress /> : <Home />}
           <Analytics />
         </Styled.AppContainer>
