@@ -103,7 +103,7 @@ const Projects = () => {
         {profileData.projects.map((project, index) => (
           <Styled.ProjectCard key={index}>
             <Styled.Image>
-              <img src={projectImages[project.image]} alt={project.name} width="350" />
+              <img src={projectImages[project.image]} alt={project.name} width="350" loading="lazy" />
             </Styled.Image>
             <Styled.Details>
               <Styled.ProjectName>{project.name}</Styled.ProjectName>

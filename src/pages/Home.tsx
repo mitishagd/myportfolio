@@ -1,3 +1,4 @@
+import { lazy, Suspense, useState, useEffect, useRef } from 'react'
 import styled from 'styled-components'
 import Typewriter from 'typewriter-effect'
 
@@ -5,7 +6,6 @@ import About from '../components/About.tsx'
 import ProfilePicture from '../components/ProfilePicture.tsx'
 import SocialLinksSidebar from '../components/SocialLinks.tsx'
 import Experience from '../components/Experience.tsx'
-import Skills from '../components/Skills.tsx'
 import Footer from '../components/Footer.tsx'
 import NavBar from '../components/NavBar.tsx'
 import Projects from '../components/Projects.tsx'
@@ -13,6 +13,8 @@ import VisuallyHidden from '../components/VisuallyHidden.tsx'
 
 import { useTheme } from '../hooks/useTheme'
 import { lightTheme, darkTheme } from '../theme/theme'
+
+const Skills = lazy(() => import('../components/Skills.tsx'))
 
 const Styled = {
   SocialLinksSidebar: styled(SocialLinksSidebar)``,
@@ -70,6 +72,22 @@ const bioText = 'Software Engineer | Passionate about tech improving lives | Dog
 const Home = () => {
   const { isDarkMode } = useTheme()
   const theme = isDarkMode ? darkTheme : lightTheme
+  const [showSkills, setShowSkills] = useState(false)
+  const skillsRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setShowSkills(true)
+          observer.disconnect()
+        }
+      },
+      { rootMargin: '100px' }
+    )
+    if (skillsRef.current) observer.observe(skillsRef.current)
+    return () => observer.disconnect()
+  }, [])
 
   return (
     <Styled.Root>
@@ -98,7 +116,13 @@ const Home = () => {
         </Styled.Intro>
       </Styled.AboutContainer>
       <About />
-      <Skills />
+      <div ref={skillsRef}>
+        {showSkills && (
+          <Suspense fallback={null}>
+            <Skills />
+          </Suspense>
+        )}
+      </div>
       <Experience />
       <Projects />
       <Footer />
