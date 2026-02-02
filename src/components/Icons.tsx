@@ -34,6 +34,7 @@ const Styled = {
     svg {
       width: 25px;
       height: 25px;
+      color: ${({ theme }) => theme.primary};
     }
   `,
   SkillsIcon: styled.div`
@@ -43,6 +44,7 @@ const Styled = {
     svg {
       width: 50px;
       height: 50px;
+      ${({ theme }) => theme.isDark && `color: ${theme.muted} !important;`}
     }
 
     @media (max-width: 480px) {
@@ -57,7 +59,7 @@ const Styled = {
 export function LinkedInIcon() {
   return (
     <Styled.SocialIcon>
-      <FaLinkedin color="black" />
+      <FaLinkedin />
     </Styled.SocialIcon>
   )
 }
@@ -65,7 +67,7 @@ export function LinkedInIcon() {
 export function GithubIcon() {
   return (
     <Styled.SocialIcon>
-      <FaGithub color="#000" />
+      <FaGithub />
     </Styled.SocialIcon>
   )
 }
@@ -73,7 +75,7 @@ export function GithubIcon() {
 export function MediumIcon() {
   return (
     <Styled.SocialIcon>
-      <FaMedium color="#000" />
+      <FaMedium />
     </Styled.SocialIcon>
   )
 }
@@ -81,7 +83,7 @@ export function MediumIcon() {
 export function EmailIcon() {
   return (
     <Styled.SocialIcon>
-      <FaEnvelope color="#000" style={{ width: '23px', height: '23px' }} />
+      <FaEnvelope style={{ width: '23px', height: '23px' }} />
     </Styled.SocialIcon>
   )
 }
@@ -89,7 +91,7 @@ export function EmailIcon() {
 export function GoodreadsIcon() {
   return (
     <Styled.SocialIcon>
-      <FaGoodreads color="#000" />
+      <FaGoodreads />
     </Styled.SocialIcon>
   )
 }
