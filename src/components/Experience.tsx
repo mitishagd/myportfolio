@@ -7,8 +7,8 @@ const Styled = {
     text-align: center;
     margin-left: 17%;
     width: 65%;
-    margin-bottom: 40px;
-    scroll-margin-top: 100px;
+    margin-bottom: ${({ theme }) => theme.spacing.lg};
+    scroll-margin-top: ${({ theme }) => theme.spacing.section};
 
     @media (max-width: 768px) {
       margin-left: 5%;
@@ -57,7 +57,7 @@ const Styled = {
     font-weight: normal;
     font-size: 14px;
     color: grey;
-    margin-bottom: 8px;
+    margin-bottom: ${({ theme }) => theme.spacing.xs};
   `,
   Description: styled.ul`
     text-align: left;

@@ -1,3 +1,13 @@
+const spacing = {
+  xs: '8px',
+  sm: '16px',
+  md: '24px',
+  lg: '40px',
+  xl: '64px',
+  '2xl': '80px',
+  section: '100px',
+}
+
 export const lightTheme = {
   bg: '#FAF9F6', // Warm Cream
   text: '#022C22', // Deep Forest Green
@@ -7,6 +17,7 @@ export const lightTheme = {
   muted: '#475569', // Slate-600 (Better readability for dates than dark green)
   border: '#E2E8F0', // Soft border for cards
   isDark: false,
+  spacing,
 }
 
 export const darkTheme = {
@@ -18,6 +29,7 @@ export const darkTheme = {
   muted: '#A7F3D0', // Emerald-200 (For secondary text)
   border: '#065F46', // Deep border
   isDark: true,
+  spacing,
 }
 
 export type Theme = typeof darkTheme

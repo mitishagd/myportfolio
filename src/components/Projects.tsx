@@ -9,9 +9,9 @@ const Styled = {
     text-align: center;
     margin-left: 17%;
     width: 65%;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    scroll-margin-top: 100px;
+    margin-top: ${({ theme }) => theme.spacing.lg};
+    margin-bottom: ${({ theme }) => theme.spacing.lg};
+    scroll-margin-top: ${({ theme }) => theme.spacing.section};
 
     @media (max-width: 768px) {
       margin-left: 5%;
@@ -84,10 +84,10 @@ const Styled = {
     color: ${({ theme }) => theme.primary};
   `,
   Github: styled(FaGithub)`
-    margin-right: 8px;
+    margin-right: ${({ theme }) => theme.spacing.xs};
   `,
   ExternalLink: styled(FaExternalLinkAlt)`
-    margin-right: 8px;
+    margin-right: ${({ theme }) => theme.spacing.xs};
   `,
 }
 

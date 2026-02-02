@@ -70,7 +70,7 @@ const Styled = {
     background: none;
     border: none;
     cursor: pointer;
-    padding: 8px;
+    padding: ${({ theme }) => theme.spacing.xs};
     display: flex;
     align-items: center;
     justify-content: center;

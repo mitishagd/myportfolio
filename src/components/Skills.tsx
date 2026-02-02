@@ -34,15 +34,15 @@ const Styled = {
   Root: styled.section`
     text-align: center;
     margin-left: 15%;
-    margin-top: 100px;
+    margin-top: ${({ theme }) => theme.spacing.section};
     width: 70%;
     height: 100%;
     margin-bottom: 150px;
-    scroll-margin-top: 100px;
+    scroll-margin-top: ${({ theme }) => theme.spacing.section};
   `,
   Title: styled.h2`
     font-size: 26px;
-    margin-bottom: 80px;
+    margin-bottom: ${({ theme }) => theme.spacing['2xl']};
   `,
   IconWrapper: styled.div`
     padding: 0 5px;

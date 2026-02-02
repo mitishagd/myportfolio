@@ -7,21 +7,21 @@ const Styled = {
     text-align: center;
     font-size: 16px;
     margin: 0 auto;
-    margin-top: 100px;
-    padding: 40px;
+    margin-top: ${({ theme }) => theme.spacing.section};
+    padding: ${({ theme }) => theme.spacing.lg};
     line-height: 1.6;
     white-space: pre-line;
     max-width: 600px;
     font-weight: normal;
     height: 100%;
-    scroll-margin-top: 100px;
+    scroll-margin-top: ${({ theme }) => theme.spacing.section};
     background: ${({ theme }) => theme.card};
     border-radius: 16px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
   `,
   Title: styled.h2`
     font-size: 26px;
-    margin-bottom: 50px;
+    margin-bottom: ${({ theme }) => theme.spacing.lg};
   `,
   ResumeButton: styled.a`
     display: inline-block;
