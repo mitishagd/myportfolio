@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import styled from 'styled-components'
 import { FaBars, FaTimes, FaSun, FaMoon } from 'react-icons/fa'
-import logo from '../assets/icons/logo.png'
+import logoDark from '../assets/icons/logo-dark.png'
+import logoLight from '../assets/icons/logo-light.png'
 import { useTheme } from '../theme/ThemeContext'
 
 const Styled = {
@@ -108,7 +109,7 @@ const NavBar = () => {
 
   return (
     <Styled.Container>
-      <Styled.Logo src={logo} alt="Logo" />
+      <Styled.Logo src={isDarkMode ? logoDark : logoLight} alt="Logo" />
       <Styled.RightSection>
         <Styled.NavLinks $isOpen={isMenuOpen}>
           <Styled.NavLink href="#about" onClick={closeMenu}>
