@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import styled from 'styled-components'
 import { FaBars, FaTimes, FaSun, FaMoon } from 'react-icons/fa'
-import logoDark from '../assets/icons/logo-dark.png'
-import logoLight from '../assets/icons/logo-light.png'
+import logoDark from '../assets/logos/logo-dark.png'
+import logoLight from '../assets/logos/logo-light.png'
 import { useTheme } from '../hooks/useTheme'
 
 const Styled = {
