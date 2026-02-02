@@ -2,9 +2,10 @@ import styled from 'styled-components'
 import { profileData } from '../config/profileData'
 import cartoonGeneratorGif from '../assets/gifs/cartoon-generator.gif'
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
+import VisuallyHidden from './VisuallyHidden'
 
 const Styled = {
-  Root: styled.div`
+  Root: styled.section`
     text-align: center;
     margin-left: 17%;
     width: 65%;
@@ -96,8 +97,8 @@ const Projects = () => {
   }
 
   return (
-    <Styled.Root id="projects">
-      <Styled.Title>Projects</Styled.Title>
+    <Styled.Root id="projects" aria-labelledby="projects-title">
+      <Styled.Title id="projects-title">Projects</Styled.Title>
       <Styled.Content>
         {profileData.projects.map((project, index) => (
           <Styled.ProjectCard key={index}>
@@ -115,6 +116,7 @@ const Projects = () => {
                     rel="noopener noreferrer"
                   >
                     <Styled.Github /> Code
+                    <VisuallyHidden>(opens in new tab)</VisuallyHidden>
                   </Styled.LinkButton>
                   <Styled.LinkButton
                     href={project.demoUrl}
@@ -122,6 +124,7 @@ const Projects = () => {
                     rel="noopener noreferrer"
                   >
                     <Styled.ExternalLink /> Demo
+                    <VisuallyHidden>(opens in new tab)</VisuallyHidden>
                   </Styled.LinkButton>
                 </Styled.Links>
               </Styled.Description>

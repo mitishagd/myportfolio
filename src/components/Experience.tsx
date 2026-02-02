@@ -1,8 +1,9 @@
 import styled from 'styled-components'
 import { profileData } from '../config/profileData'
+import VisuallyHidden from './VisuallyHidden'
 
 const Styled = {
-  Root: styled.div`
+  Root: styled.section`
     text-align: center;
     margin-left: 17%;
     width: 65%;
@@ -52,53 +53,45 @@ const Styled = {
   Role: styled.div`
     font-weight: bold;
   `,
-  Duration: styled.td`
+  Duration: styled.div`
     font-weight: normal;
-    min-width: 200px;
-    vertical-align: top;
-
-    @media (max-width: 768px) {
-      display: block;
-      min-width: auto;
-      font-size: 14px;
-      color: grey;
-      margin-bottom: 5px;
-    }
+    font-size: 14px;
+    color: grey;
+    margin-bottom: 8px;
   `,
   Description: styled.ul`
     text-align: left;
     margin-left: -20px;
   `,
-  RoleAndDescription: styled.td`
+  RoleAndDescription: styled.div`
     text-align: left;
   `,
 }
 
 const Experience = () => {
   return (
-    <Styled.Root id="experience">
-      <Styled.Title>Experience</Styled.Title>
+    <Styled.Root id="experience" aria-labelledby="experience-title">
+      <Styled.Title id="experience-title">Experience</Styled.Title>
       <Styled.Content>
-        <table>
-          {profileData.experience.map((job, index) => (
-            <Styled.Position key={index}>
-              <Styled.Duration>{job.duration}</Styled.Duration>
-              <Styled.RoleAndDescription>
-                <Styled.Role>
-                  {job.role},{' '}
-                  <Styled.Company target="_blank" href={job.companyUrl}>
-                    {job.company}
-                  </Styled.Company>
-                </Styled.Role>
-                <Styled.Description>
-                  {job.description.map((item, i) => (
-                    <li key={i}>{item}</li>
-                  ))}
-                </Styled.Description>
-              </Styled.RoleAndDescription>
-            </Styled.Position>
-          ))}
-        </table>
+        {profileData.experience.map((job, index) => (
+          <Styled.Position key={index}>
+            <Styled.Duration>{job.duration}</Styled.Duration>
+            <Styled.RoleAndDescription>
+              <Styled.Role>
+                {job.role},{' '}
+                <Styled.Company target="_blank" href={job.companyUrl}>
+                  {job.company}
+                  <VisuallyHidden>(opens in new tab)</VisuallyHidden>
+                </Styled.Company>
+              </Styled.Role>
+              <Styled.Description>
+                {job.description.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </Styled.Description>
+            </Styled.RoleAndDescription>
+          </Styled.Position>
+        ))}
       </Styled.Content>
     </Styled.Root>
   )

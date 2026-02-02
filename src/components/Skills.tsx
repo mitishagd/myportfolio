@@ -31,7 +31,7 @@ import {
 } from './Icons.tsx'
 
 const Styled = {
-  Root: styled.div`
+  Root: styled.section`
     text-align: center;
     margin-left: 15%;
     margin-top: 100px;
@@ -49,6 +49,33 @@ const Styled = {
     text-align: center;
   `,
 }
+
+const skills = [
+  { name: 'React', Icon: ReactIcon },
+  { name: 'TypeScript', Icon: TypeScriptIcon },
+  { name: 'JavaScript', Icon: JavaScriptIcon },
+  { name: 'HTML', Icon: HTMLIcon },
+  { name: 'CSS', Icon: CSSIcon },
+  { name: 'Node.js', Icon: NodeJSIcon },
+  { name: 'Vite', Icon: ViteIcon },
+  { name: 'Python', Icon: PythonIcon },
+  { name: 'Django', Icon: DjangoIcon },
+  { name: 'Java', Icon: JavaIcon },
+  { name: 'Spring Boot', Icon: SpringBootIcon },
+  { name: 'GraphQL', Icon: GraphqlIcon },
+  { name: 'MySQL', Icon: MySQLIcon },
+  { name: 'MongoDB', Icon: MongoDBIcon },
+  { name: 'Jenkins', Icon: JenkinsIcon },
+  { name: 'Docker', Icon: DockerIcon },
+  { name: 'Git', Icon: GitIcon },
+  { name: 'Vercel', Icon: VercelIcon },
+  { name: 'Jira', Icon: JiraIcon },
+  { name: 'Notion', Icon: NotionIcon },
+  { name: 'Sumo Logic', Icon: SumologicIcon },
+  { name: 'AWS', Icon: AwsIcon },
+  { name: 'OpenAI', Icon: OpenAIIcon },
+  { name: 'Anthropic', Icon: AnthropicIcon },
+]
 
 const Skills = () => {
   const settings = {
@@ -76,81 +103,14 @@ const Skills = () => {
   }
 
   return (
-    <Styled.Root id="skills">
-      <Styled.Title>Skills</Styled.Title>
+    <Styled.Root id="skills" aria-labelledby="skills-title">
+      <Styled.Title id="skills-title">Skills</Styled.Title>
       <Slider {...settings}>
-        <Styled.IconWrapper>
-          <ReactIcon />
-        </Styled.IconWrapper>
-        <Styled.IconWrapper>
-          <TypeScriptIcon />
-        </Styled.IconWrapper>
-        <Styled.IconWrapper>
-          <JavaScriptIcon />
-        </Styled.IconWrapper>
-        <Styled.IconWrapper>
-          <HTMLIcon />
-        </Styled.IconWrapper>
-        <Styled.IconWrapper>
-          <CSSIcon />
-        </Styled.IconWrapper>
-        <Styled.IconWrapper>
-          <NodeJSIcon />
-        </Styled.IconWrapper>
-        <Styled.IconWrapper>
-          <ViteIcon />
-        </Styled.IconWrapper>
-        <Styled.IconWrapper>
-          <PythonIcon />
-        </Styled.IconWrapper>
-        <Styled.IconWrapper>
-          <DjangoIcon />
-        </Styled.IconWrapper>
-        <Styled.IconWrapper>
-          <JavaIcon />
-        </Styled.IconWrapper>
-        <Styled.IconWrapper>
-          <SpringBootIcon />
-        </Styled.IconWrapper>
-        <Styled.IconWrapper>
-          <GraphqlIcon />
-        </Styled.IconWrapper>
-        <Styled.IconWrapper>
-          <MySQLIcon />
-        </Styled.IconWrapper>
-        <Styled.IconWrapper>
-          <MongoDBIcon />
-        </Styled.IconWrapper>
-        <Styled.IconWrapper>
-          <JenkinsIcon />
-        </Styled.IconWrapper>
-        <Styled.IconWrapper>
-          <DockerIcon />
-        </Styled.IconWrapper>
-        <Styled.IconWrapper>
-          <GitIcon />
-        </Styled.IconWrapper>
-        <Styled.IconWrapper>
-          <VercelIcon />
-        </Styled.IconWrapper>
-        <Styled.IconWrapper>
-          <JiraIcon />
-        </Styled.IconWrapper>
-        <Styled.IconWrapper>
-          <NotionIcon />
-        </Styled.IconWrapper>
-        <Styled.IconWrapper>
-          <SumologicIcon />
-        </Styled.IconWrapper>
-        <Styled.IconWrapper>
-          <AwsIcon />
-        </Styled.IconWrapper>
-        <Styled.IconWrapper>
-          <OpenAIIcon />
-        </Styled.IconWrapper>
-        <Styled.IconWrapper>
-          <AnthropicIcon />
-        </Styled.IconWrapper>
+        {skills.map(({ name, Icon }) => (
+          <Styled.IconWrapper key={name} role="img" aria-label={name}>
+            <Icon />
+          </Styled.IconWrapper>
+        ))}
       </Slider>
     </Styled.Root>
   )

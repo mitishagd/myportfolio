@@ -20,16 +20,36 @@ const Styled = {
 export const SocialLinks = () => {
   return (
     <>
-      <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/mitisha-dodderi/">
+      <a
+        target="_blank"
+        rel="noreferrer"
+        href="https://www.linkedin.com/in/mitisha-dodderi/"
+        aria-label="LinkedIn (opens in new tab)"
+      >
         <LinkedInIcon />
       </a>
-      <a target="_blank" rel="noreferrer" href="https://github.com/mitishagd">
+      <a
+        target="_blank"
+        rel="noreferrer"
+        href="https://github.com/mitishagd"
+        aria-label="GitHub (opens in new tab)"
+      >
         <GithubIcon />
       </a>
-      <a target="_blank" rel="noreferrer" href="mailto:mitisha.dodderi@gmail.com">
+      <a
+        target="_blank"
+        rel="noreferrer"
+        href="mailto:mitisha.dodderi@gmail.com"
+        aria-label="Send Email"
+      >
         <EmailIcon />
       </a>
-      <a target="_blank" rel="noreferrer" href="https://medium.com/@mitisha.dodderi">
+      <a
+        target="_blank"
+        rel="noreferrer"
+        href="https://medium.com/@mitisha.dodderi"
+        aria-label="Medium (opens in new tab)"
+      >
         <MediumIcon />
       </a>
       <a

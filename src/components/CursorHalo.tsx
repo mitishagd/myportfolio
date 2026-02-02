@@ -41,7 +41,7 @@ const CursorHalo = () => {
 
   if (!isDarkMode) return null
 
-  return <Halo $x={position.x} $y={position.y} />
+  return <Halo $x={position.x} $y={position.y} aria-hidden="true" />
 }
 
 export default CursorHalo

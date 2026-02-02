@@ -1,11 +1,18 @@
 import React, { useState, useEffect } from 'react'
-import styled, { ThemeProvider } from 'styled-components'
+import styled, { ThemeProvider, createGlobalStyle } from 'styled-components'
 import { Analytics } from '@vercel/analytics/react'
 import WorkInProgress from './pages/WorkInProgress.tsx'
 import Home from './pages/Home.tsx'
 import CursorHalo from './components/CursorHalo.tsx'
 import { lightTheme, darkTheme } from './theme/theme'
 import { ThemeContext } from './theme/ThemeContext'
+
+const GlobalStyle = createGlobalStyle`
+  *:focus-visible {
+    outline: 2px solid ${({ theme }) => theme.primary};
+    outline-offset: 2px;
+  }
+`
 
 const Styled = {
   AppContainer: styled.div`
@@ -35,6 +42,7 @@ const App = () => {
   return (
     <ThemeContext.Provider value={{ isDarkMode, toggleTheme }}>
       <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
+        <GlobalStyle />
         <Styled.AppContainer>
           <CursorHalo />
           {isWorkInProgress ? <WorkInProgress /> : <Home />}

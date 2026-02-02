@@ -109,7 +109,7 @@ const NavBar = () => {
 
   return (
     <Styled.Container>
-      <Styled.Logo src={isDarkMode ? logoDark : logoLight} alt="Logo" />
+      <Styled.Logo src={isDarkMode ? logoDark : logoLight} alt="Mitisha Dodderi - Home" />
       <Styled.RightSection>
         <Styled.NavLinks $isOpen={isMenuOpen}>
           <Styled.NavLink href="#about" onClick={closeMenu}>
@@ -128,7 +128,11 @@ const NavBar = () => {
         <Styled.ThemeToggle onClick={toggleTheme} aria-label="Toggle theme">
           {isDarkMode ? <FaSun /> : <FaMoon />}
         </Styled.ThemeToggle>
-        <Styled.MenuButton onClick={toggleMenu}>
+        <Styled.MenuButton
+          onClick={toggleMenu}
+          aria-expanded={isMenuOpen}
+          aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+        >
           {isMenuOpen ? <FaTimes /> : <FaBars />}
         </Styled.MenuButton>
       </Styled.RightSection>

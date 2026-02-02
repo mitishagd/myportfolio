@@ -3,7 +3,7 @@ import resume from '../assets/resume.pdf'
 import { profileData } from '../config/profileData'
 
 const Styled = {
-  Container: styled.div`
+  Root: styled.section`
     text-align: center;
     font-size: 16px;
     margin: 0 auto;
@@ -27,7 +27,7 @@ const Styled = {
     display: inline-block;
     padding: 8px 16px;
     font-size: 14px;
-    background-color: #10b981;
+    background-color: ${({ theme }) => theme.secondary};
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -35,22 +35,22 @@ const Styled = {
     margin-bottom: 50px;
 
     &:hover {
-      background-color: #34d399;
+      filter: brightness(1.2);
     }
   `,
 }
 
 const About = () => {
   return (
-    <Styled.Container id="about">
-      <Styled.Title>About Me</Styled.Title>
+    <Styled.Root id="about" aria-labelledby="about-title">
+      <Styled.Title id="about-title">About Me</Styled.Title>
       {profileData.aboutText}
       <div>
         <Styled.ResumeButton href={resume} download="Mitisha_Resume.pdf">
           Download Resume
         </Styled.ResumeButton>
       </div>
-    </Styled.Container>
+    </Styled.Root>
   )
 }
 

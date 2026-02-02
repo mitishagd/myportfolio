@@ -9,6 +9,7 @@ import Skills from '../components/Skills.tsx'
 import Footer from '../components/Footer.tsx'
 import NavBar from '../components/NavBar.tsx'
 import Projects from '../components/Projects.tsx'
+import VisuallyHidden from '../components/VisuallyHidden.tsx'
 
 import { useTheme } from '../hooks/useTheme'
 import { lightTheme, darkTheme } from '../theme/theme'
@@ -72,11 +73,12 @@ const Home = () => {
 
   return (
     <Styled.Root>
+      <VisuallyHidden as="h1">Mitisha Ganesha Dodderi - Software Engineer</VisuallyHidden>
       <NavBar />
       <Styled.SocialLinksSidebar />
       <Styled.AboutContainer>
         <Styled.ProfilePicture />
-        <Styled.Intro>
+        <Styled.Intro aria-label={`Hi, I am Mitisha Ganesha Dodderi. ${bioText}`}>
           <Typewriter
             onInit={(typewriter) => {
               typewriter
