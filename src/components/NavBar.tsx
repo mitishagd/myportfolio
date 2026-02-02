@@ -10,7 +10,7 @@ const Styled = {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 40px 15px 20px;
+    padding: 0 40px 0 10px;
     position: fixed;
     top: 0;
     left: 0;
@@ -20,16 +20,16 @@ const Styled = {
     transition: background 0.3s ease;
 
     @media (max-width: 768px) {
-      padding: 10px 20px;
+      padding: 0 20px 0 10px;
     }
   `,
   Logo: styled.img`
-    height: 60px;
-    width: 60px;
+    height: 90px;
+    width: 90px;
 
     @media (max-width: 768px) {
-      height: 50px;
-      width: 50px;
+      height: 70px;
+      width: 70px;
     }
   `,
   NavLinks: styled.div<{ $isOpen: boolean }>`
