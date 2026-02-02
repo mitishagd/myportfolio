@@ -1,7 +1,8 @@
+import { FaExternalLinkAlt,FaGithub } from 'react-icons/fa'
 import styled from 'styled-components'
-import { profileData } from '../config/profileData'
+
 import cartoonGeneratorGif from '../assets/gifs/cartoon-generator.gif'
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
+import { profileData } from '../config/profileData'
 import VisuallyHidden from './VisuallyHidden'
 
 const Styled = {

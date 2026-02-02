@@ -1,30 +1,30 @@
-import styled from 'styled-components'
-import { FaGoodreads, FaJava, FaGithub, FaLinkedin, FaMedium, FaEnvelope } from 'react-icons/fa'
+import { FaEnvelope,FaGithub, FaGoodreads, FaJava, FaLinkedin, FaMedium } from 'react-icons/fa'
 import {
-  SiReact,
-  SiTypescript,
-  SiJavascript,
-  SiHtml5,
+  SiAmazon,
+  SiAnthropic,
   SiCss3,
-  SiNodedotjs,
-  SiPython,
   SiDjango,
-  SiSpringboot,
-  SiGraphql,
-  SiMysql,
-  SiMongodb,
-  SiJenkins,
   SiDocker,
   SiGit,
-  SiVercel,
-  SiAmazon,
-  SiOpenai,
-  SiAnthropic,
-  SiVite,
+  SiGraphql,
+  SiHtml5,
+  SiJavascript,
+  SiJenkins,
   SiJira,
+  SiMongodb,
+  SiMysql,
+  SiNodedotjs,
   SiNotion,
+  SiOpenai,
+  SiPython,
+  SiReact,
+  SiSpringboot,
   SiSumologic,
+  SiTypescript,
+  SiVercel,
+  SiVite,
 } from 'react-icons/si'
+import styled from 'styled-components'
 
 const Styled = {
   SocialIcon: styled.div`

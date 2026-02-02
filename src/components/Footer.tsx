@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+
 import { SocialLinks } from './SocialLinks.tsx'
 
 const Styled = {

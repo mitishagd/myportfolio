@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+
 import { profileData } from '../config/profileData'
 import VisuallyHidden from './VisuallyHidden'
 

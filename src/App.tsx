@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react'
-import styled, { ThemeProvider, createGlobalStyle } from 'styled-components'
 import { Analytics } from '@vercel/analytics/react'
-import WorkInProgress from './pages/WorkInProgress.tsx'
-import Home from './pages/Home.tsx'
+import React, { useEffect,useState } from 'react'
+import styled, { createGlobalStyle,ThemeProvider } from 'styled-components'
+
 import CursorHalo from './components/CursorHalo.tsx'
-import { lightTheme, darkTheme } from './theme/theme'
+import Home from './pages/Home.tsx'
+import WorkInProgress from './pages/WorkInProgress.tsx'
+import { darkTheme,lightTheme } from './theme/theme'
 import { ThemeContext } from './theme/ThemeContext'
 
 const GlobalStyle = createGlobalStyle`

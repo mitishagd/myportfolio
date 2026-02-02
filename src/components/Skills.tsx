@@ -1,33 +1,34 @@
-import styled from 'styled-components'
-import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
+import Slider from 'react-slick'
+import styled from 'styled-components'
+
 import {
+  AnthropicIcon,
+  AwsIcon,
+  CSSIcon,
   DjangoIcon,
+  DockerIcon,
+  GitIcon,
+  GraphqlIcon,
+  HTMLIcon,
+  JavaIcon,
   JavaScriptIcon,
+  JenkinsIcon,
+  JiraIcon,
+  MongoDBIcon,
+  MySQLIcon,
+  NodeJSIcon,
+  NotionIcon,
+  OpenAIIcon,
   PythonIcon,
   ReactIcon,
+  SpringBootIcon,
+  SumologicIcon,
   TypeScriptIcon,
-  HTMLIcon,
-  CSSIcon,
-  GitIcon,
   VercelIcon,
   ViteIcon,
-  AwsIcon,
-  JavaIcon,
-  SpringBootIcon,
-  MongoDBIcon,
-  JenkinsIcon,
-  GraphqlIcon,
-  DockerIcon,
-  NodeJSIcon,
-  MySQLIcon,
-  JiraIcon,
-  NotionIcon,
-  SumologicIcon,
-  OpenAIIcon,
-  AnthropicIcon,
 } from './Icons.tsx'
 
 const Styled = {

@@ -1,18 +1,17 @@
-import { lazy, Suspense, useState, useEffect, useRef } from 'react'
+import { lazy, Suspense, useEffect, useRef,useState } from 'react'
 import styled from 'styled-components'
 import Typewriter from 'typewriter-effect'
 
 import About from '../components/About.tsx'
-import ProfilePicture from '../components/ProfilePicture.tsx'
-import SocialLinksSidebar from '../components/SocialLinks.tsx'
 import Experience from '../components/Experience.tsx'
 import Footer from '../components/Footer.tsx'
 import NavBar from '../components/NavBar.tsx'
+import ProfilePicture from '../components/ProfilePicture.tsx'
 import Projects from '../components/Projects.tsx'
+import SocialLinksSidebar from '../components/SocialLinks.tsx'
 import VisuallyHidden from '../components/VisuallyHidden.tsx'
-
 import { useTheme } from '../hooks/useTheme'
-import { lightTheme, darkTheme } from '../theme/theme'
+import { darkTheme,lightTheme } from '../theme/theme'
 
 const Skills = lazy(() => import('../components/Skills.tsx'))
 
