@@ -24,6 +24,9 @@ const Styled = {
       padding: 0 20px 0 10px;
     }
   `,
+  LogoLink: styled.a`
+    cursor: pointer;
+  `,
   Logo: styled.img`
     height: 95px;
     width: 95px;
@@ -107,10 +110,13 @@ const NavBar = () => {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
   const closeMenu = () => setIsMenuOpen(false)
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
 
   return (
     <Styled.Container>
-      <Styled.Logo src={isDarkMode ? logoDark : logoLight} alt="Mitisha Dodderi - Home" />
+      <Styled.LogoLink onClick={scrollToTop} aria-label="Scroll to top">
+        <Styled.Logo src={isDarkMode ? logoDark : logoLight} alt="Mitisha Dodderi - Home" />
+      </Styled.LogoLink>
       <Styled.RightSection>
         <Styled.NavLinks $isOpen={isMenuOpen}>
           <Styled.NavLink href="#about" onClick={closeMenu}>
