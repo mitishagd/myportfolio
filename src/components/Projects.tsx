@@ -1,7 +1,7 @@
 import { FaExternalLinkAlt,FaGithub } from 'react-icons/fa'
 import styled from 'styled-components'
 
-import cartoonGeneratorGif from '../assets/gifs/cartoon-generator.gif'
+import cartoonGeneratorVideo from '../assets/videos/cartoon-generator.mp4'
 import { profileData } from '../config/profileData'
 import { SecondaryButton } from './ui/Button'
 import VisuallyHidden from './ui/VisuallyHidden'
@@ -54,7 +54,8 @@ const Styled = {
       margin-bottom: 15px;
     }
 
-    img {
+    img,
+    video {
       max-width: 100%;
       height: auto;
       border-radius: 8px;
@@ -88,8 +89,8 @@ const Styled = {
 }
 
 const Projects = () => {
-  const projectImages: Record<string, string> = {
-    cartoonGenerator: cartoonGeneratorGif,
+  const projectVideos: Record<string, string> = {
+    cartoonGenerator: cartoonGeneratorVideo,
   }
 
   return (
@@ -99,7 +100,17 @@ const Projects = () => {
         {profileData.projects.map((project, index) => (
           <Styled.ProjectCard key={index}>
             <Styled.Image>
-              <img src={projectImages[project.image]} alt={project.name} width="350" loading="lazy" />
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                width="350"
+                height="200"
+                aria-label={project.name}
+              >
+                <source src={projectVideos[project.image]} type="video/mp4" />
+              </video>
             </Styled.Image>
             <Styled.Details>
               <Styled.ProjectName>{project.name}</Styled.ProjectName>

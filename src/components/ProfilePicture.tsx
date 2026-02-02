@@ -22,7 +22,7 @@ const Styled = {
 const ProfilePicture = () => {
   return (
     <Styled.Container>
-      <Styled.Image src={Picture} alt="Profile" />
+      <Styled.Image src={Picture} alt="Profile" fetchPriority="high" width={300} height={300} />
     </Styled.Container>
   )
 }

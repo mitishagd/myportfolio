@@ -57,6 +57,7 @@ export const SocialLinks = () => {
         target="_blank"
         rel="noreferrer"
         href="https://www.goodreads.com/user/show/17540615-mitisha"
+        aria-label="Goodreads (opens in new tab)"
       >
         <GoodreadsIcon />
       </a>

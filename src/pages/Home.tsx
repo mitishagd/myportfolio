@@ -55,6 +55,7 @@ const Styled = {
     float: right;
   `,
   Root: styled.div``,
+  Main: styled.main``,
   Name: styled.span`
     color: #10b981;
     margin-left: 0.25em;
@@ -93,37 +94,39 @@ const Home = () => {
       <VisuallyHidden as="h1">Mitisha Ganesha Dodderi - Software Engineer</VisuallyHidden>
       <NavBar />
       <Styled.SocialLinksSidebar />
-      <Styled.AboutContainer>
-        <Styled.ProfilePicture />
-        <Styled.Intro aria-label={`Hi, I am Mitisha Ganesha Dodderi. ${bioText}`}>
-          <Typewriter
-            onInit={(typewriter) => {
-              typewriter
-                .typeString('Hi, I am ')
-                .typeString(
-                  `<span style="color: ${theme.secondary};">Mitisha Ganesha Dodderi</span>`
-                )
-                .typeString('.<br/><br/>')
-                .typeString('<span style="font-size: 18px;">' + bioText + '</span>')
-                .start()
-            }}
-            options={{
-              delay: 80,
-              cursor: '|',
-            }}
-          />
-        </Styled.Intro>
-      </Styled.AboutContainer>
-      <About />
-      <div ref={skillsRef}>
-        {showSkills && (
-          <Suspense fallback={null}>
-            <Skills />
-          </Suspense>
-        )}
-      </div>
-      <Experience />
-      <Projects />
+      <Styled.Main>
+        <Styled.AboutContainer>
+          <Styled.ProfilePicture />
+          <Styled.Intro aria-label={`Hi, I am Mitisha Ganesha Dodderi. ${bioText}`}>
+            <Typewriter
+              onInit={(typewriter) => {
+                typewriter
+                  .typeString('Hi, I am ')
+                  .typeString(
+                    `<span style="color: ${theme.secondary};">Mitisha Ganesha Dodderi</span>`
+                  )
+                  .typeString('.<br/><br/>')
+                  .typeString('<span style="font-size: 18px;">' + bioText + '</span>')
+                  .start()
+              }}
+              options={{
+                delay: 80,
+                cursor: '|',
+              }}
+            />
+          </Styled.Intro>
+        </Styled.AboutContainer>
+        <About />
+        <div ref={skillsRef}>
+          {showSkills && (
+            <Suspense fallback={null}>
+              <Skills />
+            </Suspense>
+          )}
+        </div>
+        <Experience />
+        <Projects />
+      </Styled.Main>
       <Footer />
     </Styled.Root>
   )
