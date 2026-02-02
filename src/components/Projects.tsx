@@ -79,7 +79,7 @@ const Styled = {
     padding: 8px 30px;
     border: 1px solid #000;
     font-size: 14px;
-    color: #10b981;
+    color: ${({ theme }) => theme.primary};
   `,
   Github: styled(FaGithub)`
     margin-right: 8px;

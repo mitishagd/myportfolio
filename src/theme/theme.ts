@@ -1,18 +1,20 @@
 export const lightTheme = {
-  bg: '#F8FCF9',
-  text: '#064E3B',
-  card: '#FFFFFF',
-  primary: '#047857',
-  muted: '#065f46',
+  bg: '#FAF9F6', // Warm Cream
+  text: '#022C22', // Deep Forest Green
+  card: '#FFFFFF', // Pure white for elevation
+  primary: '#059669', // Emerald-600 (High contrast for buttons)
+  muted: '#475569', // Slate-600 (Better readability for dates than dark green)
+  border: '#E2E8F0', // Soft border for cards
   isDark: false,
 }
 
 export const darkTheme = {
-  bg: '#022e27',
-  text: '#ECFDF5',
-  card: '#064e3b',
-  primary: '#34D399',
-  muted: '#6EE7B7',
+  bg: '#022E27', // Deep Jungle Green
+  text: '#ECFDF5', // Mint-50
+  card: '#064E3B', // Emerald-900 (Lighter than bg to show depth)
+  primary: '#34D399', // Emerald-400 (Pops against dark green)
+  muted: '#A7F3D0', // Emerald-200 (For secondary text)
+  border: '#065F46', // Deep border
   isDark: true,
 }
 

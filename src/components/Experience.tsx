@@ -33,8 +33,15 @@ const Styled = {
   `,
   Company: styled.a`
     font-style: italic;
-    color: #10b981;
+    color: ${({ theme }) => theme.primary};
     font-weight: normal;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    display: inline-block;
+
+    &:hover {
+      transform: scale(1.02);
+      opacity: 0.8;
+    }
   `,
   Role: styled.div`
     font-weight: bold;

@@ -34,7 +34,7 @@ const Styled = {
     svg {
       width: 25px;
       height: 25px;
-      color: ${({ theme }) => (theme.isDark ? theme.text : theme.primary)};
+      color: ${({ theme }) => theme.text};
     }
   `,
   SkillsIcon: styled.div`

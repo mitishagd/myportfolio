@@ -31,7 +31,7 @@ const Styled = {
     margin-bottom: 50px;
 
     &:hover {
-      background-color: #059669;
+      background-color: #34d399;
     }
   `,
 }
