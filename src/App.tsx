@@ -1,11 +1,11 @@
 import { Analytics } from '@vercel/analytics/react'
-import React, { useEffect,useState } from 'react'
-import styled, { createGlobalStyle,ThemeProvider } from 'styled-components'
+import { useEffect, useState } from 'react'
+import styled, { createGlobalStyle, ThemeProvider } from 'styled-components'
 
 import CursorHalo from './components/CursorHalo.tsx'
 import Home from './pages/Home.tsx'
 import WorkInProgress from './pages/WorkInProgress.tsx'
-import { darkTheme,lightTheme } from './theme/theme'
+import { darkTheme, lightTheme } from './theme/theme'
 import { ThemeContext } from './theme/ThemeContext'
 
 const GlobalStyle = createGlobalStyle`
@@ -22,7 +22,9 @@ const Styled = {
     background: ${({ theme }) => theme.bg};
     color: ${({ theme }) => theme.text};
     min-height: 100vh;
-    transition: background 0.3s ease, color 0.3s ease;
+    transition:
+      background 0.3s ease,
+      color 0.3s ease;
   `,
 }
 
