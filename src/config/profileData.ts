@@ -9,7 +9,6 @@ export const profileData = {
       description: [
         'Led cross functional collaboration of teams to design and develop a user profile management tool for healthcare professionals and devised comprehensive testing plans.',
         'Created a FHIR compliant user database schema and used GraphQL for querying the database.',
-        'Contributed to a 50% reduction in physician visit times through innovative solutions.',
       ],
     },
     {
