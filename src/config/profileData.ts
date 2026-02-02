@@ -73,5 +73,13 @@ export const profileData = {
       githubUrl: 'https://github.com/mitishagd/CartoonGenerator',
       demoUrl: 'https://cartoon-generator-five.vercel.app/',
     },
+    {
+      name: 'Interview Questions Generator',
+      description:
+        'A full-stack application that generates tailored interview questions using AI models (Google Gemini and Groq). It features a modern, aesthetic React frontend and a serverless Node.js backend deployed on AWS Lambda.',
+      image: 'interviewQuestionsGenerator', // key to reference imported image
+      githubUrl: 'https://github.com/mitishagd/interview-questions-generator',
+      demoUrl: 'https://interview-questions-generator-blond.vercel.app/',
+    },
   ],
 }

@@ -2,6 +2,7 @@ import { FaExternalLinkAlt,FaGithub } from 'react-icons/fa'
 import styled from 'styled-components'
 
 import cartoonGeneratorVideo from '../assets/videos/cartoon-generator.mp4'
+import interviewQuestionsGeneratorVideo from '../assets/videos/interview-questions-generator.mp4'
 import { profileData } from '../config/profileData'
 import { SecondaryButton } from './ui/Button'
 import VisuallyHidden from './ui/VisuallyHidden'
@@ -33,12 +34,17 @@ const Styled = {
     align-items: flex-start;
     gap: 20px;
     padding: 25px;
+    margin-bottom: ${({ theme }) => theme.spacing.lg};
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
 
     @media (max-width: 768px) {
       flex-direction: column;
@@ -91,6 +97,7 @@ const Styled = {
 const Projects = () => {
   const projectVideos: Record<string, string> = {
     cartoonGenerator: cartoonGeneratorVideo,
+    interviewQuestionsGenerator: interviewQuestionsGeneratorVideo,
   }
 
   return (
