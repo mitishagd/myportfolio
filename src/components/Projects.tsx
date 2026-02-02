@@ -3,8 +3,8 @@ import styled from 'styled-components'
 
 import cartoonGeneratorGif from '../assets/gifs/cartoon-generator.gif'
 import { profileData } from '../config/profileData'
-import { SecondaryButton } from './Button'
-import VisuallyHidden from './VisuallyHidden'
+import { SecondaryButton } from './ui/Button'
+import VisuallyHidden from './ui/VisuallyHidden'
 
 const Styled = {
   Root: styled.section`

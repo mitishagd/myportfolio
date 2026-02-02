@@ -2,7 +2,7 @@ import { Analytics } from '@vercel/analytics/react'
 import { useEffect, useState } from 'react'
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components'
 
-import CursorHalo from './components/CursorHalo.tsx'
+import CursorHalo from './components/ui/CursorHalo'
 import Home from './pages/Home.tsx'
 import WorkInProgress from './pages/WorkInProgress.tsx'
 import { darkTheme, lightTheme } from './theme/theme'

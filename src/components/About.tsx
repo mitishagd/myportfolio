@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 import resume from '../assets/resume.pdf'
 import { profileData } from '../config/profileData'
-import { PrimaryButton } from './Button'
+import { PrimaryButton } from './ui/Button'
 
 const Styled = {
   Root: styled.section`

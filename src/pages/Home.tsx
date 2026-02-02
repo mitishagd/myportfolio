@@ -9,7 +9,7 @@ import NavBar from '../components/NavBar.tsx'
 import ProfilePicture from '../components/ProfilePicture.tsx'
 import Projects from '../components/Projects.tsx'
 import SocialLinksSidebar from '../components/SocialLinks.tsx'
-import VisuallyHidden from '../components/VisuallyHidden.tsx'
+import VisuallyHidden from '../components/ui/VisuallyHidden'
 import { useTheme } from '../hooks/useTheme'
 import { darkTheme,lightTheme } from '../theme/theme'
 
