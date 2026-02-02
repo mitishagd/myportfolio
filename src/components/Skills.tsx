@@ -34,9 +34,10 @@ const Styled = {
   Root: styled.div`
     text-align: center;
     margin-left: 15%;
+    margin-top: 100px;
     width: 70%;
     height: 100%;
-    margin-bottom: 100px;
+    margin-bottom: 150px;
     scroll-margin-top: 100px;
   `,
   Title: styled.h2`

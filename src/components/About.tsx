@@ -6,7 +6,7 @@ const Styled = {
     text-align: center;
     font-size: 16px;
     margin: 0 auto;
-    margin-top: 50px;
+    margin-top: 100px;
     padding: 40px;
     line-height: 1.6;
     white-space: pre-line;
@@ -14,6 +14,9 @@ const Styled = {
     font-weight: normal;
     height: 100%;
     scroll-margin-top: 100px;
+    background: ${({ theme }) => theme.card};
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
   `,
   Title: styled.h2`
     font-size: 24px;
