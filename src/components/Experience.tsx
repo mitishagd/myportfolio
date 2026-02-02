@@ -23,18 +23,17 @@ const Styled = {
   Content: styled.div`
     font-size: 16px;
     line-height: 1.5;
-  `,
-  Position: styled.div`
-    margin: 5px 20px;
-    margin-bottom: 50px;
-    padding: 5px 20px;
-    border-left: 3px solid ${({ theme }) => theme.primary};
-    padding-left: 20px;
 
+    table {
+      border-spacing: 0 50px;
+      border-collapse: separate;
+    }
+  `,
+  Position: styled.tr`
     @media (max-width: 768px) {
       display: flex;
       flex-direction: column;
-      margin-bottom: 30px;
+      margin-bottom: ${({ theme }) => theme.spacing.md};
     }
   `,
   Company: styled.a`
@@ -54,17 +53,29 @@ const Styled = {
   Role: styled.div`
     font-weight: bold;
   `,
-  Duration: styled.div`
+  Duration: styled.td`
     font-weight: normal;
-    font-size: 14px;
-    color: grey;
-    margin-bottom: ${({ theme }) => theme.spacing.xs};
+    min-width: 200px;
+    vertical-align: top;
+    border-left: 3px solid ${({ theme }) => theme.primary};
+    padding-left: 20px;
+
+    @media (max-width: 768px) {
+      display: block;
+      min-width: auto;
+      font-size: 14px;
+      color: ${({ theme }) => theme.muted};
+      margin-bottom: ${({ theme }) => theme.spacing.xs};
+      border-left: none;
+      padding-left: 0;
+    }
   `,
   Description: styled.ul`
     text-align: left;
-    margin-left: -20px;
+    padding-left: 20px;
+    margin: 0;
   `,
-  RoleAndDescription: styled.div`
+  RoleAndDescription: styled.td`
     text-align: left;
   `,
 }
@@ -74,25 +85,29 @@ const Experience = () => {
     <Styled.Root id="experience" aria-labelledby="experience-title">
       <Styled.Title id="experience-title">Experience</Styled.Title>
       <Styled.Content>
-        {profileData.experience.map((job, index) => (
-          <Styled.Position key={index}>
-            <Styled.Duration>{job.duration}</Styled.Duration>
-            <Styled.RoleAndDescription>
-              <Styled.Role>
-                {job.role},{' '}
-                <Styled.Company target="_blank" href={job.companyUrl}>
-                  {job.company}
-                  <VisuallyHidden>(opens in new tab)</VisuallyHidden>
-                </Styled.Company>
-              </Styled.Role>
-              <Styled.Description>
-                {job.description.map((item, i) => (
-                  <li key={i}>{item}</li>
-                ))}
-              </Styled.Description>
-            </Styled.RoleAndDescription>
-          </Styled.Position>
-        ))}
+        <table>
+          <tbody>
+            {profileData.experience.map((job, index) => (
+              <Styled.Position key={index}>
+                <Styled.Duration>{job.duration}</Styled.Duration>
+                <Styled.RoleAndDescription>
+                  <Styled.Role>
+                    {job.role},{' '}
+                    <Styled.Company target="_blank" rel="noreferrer" href={job.companyUrl}>
+                      {job.company}
+                      <VisuallyHidden>(opens in new tab)</VisuallyHidden>
+                    </Styled.Company>
+                  </Styled.Role>
+                  <Styled.Description>
+                    {job.description.map((item, i) => (
+                      <li key={i}>{item}</li>
+                    ))}
+                  </Styled.Description>
+                </Styled.RoleAndDescription>
+              </Styled.Position>
+            ))}
+          </tbody>
+        </table>
       </Styled.Content>
     </Styled.Root>
   )
