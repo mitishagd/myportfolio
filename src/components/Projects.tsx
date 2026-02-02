@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { profileData } from '../config/profileData'
 import cartoonGeneratorGif from '../assets/gifs/cartoon-generator.gif'
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
 
@@ -90,40 +91,43 @@ const Styled = {
 }
 
 const Projects = () => {
+  const projectImages: Record<string, string> = {
+    cartoonGenerator: cartoonGeneratorGif,
+  }
+
   return (
     <Styled.Root id="projects">
       <Styled.Title>Projects</Styled.Title>
       <Styled.Content>
-        <Styled.ProjectCard>
-          <Styled.Image>
-            <img src={cartoonGeneratorGif} alt="Project Screenshot" width="350" />
-          </Styled.Image>
-          <Styled.Details>
-            <Styled.ProjectName>Cartoon Generator</Styled.ProjectName>
-            <Styled.Description>
-              A full-stack application that generates cartoon-style images from user text
-              descriptions. Built with React and TypeScript on the frontend, it communicates with a
-              serverless AWS Lambda backend that integrates with OpenAI's DALL-E 3 API to create
-              custom cartoon illustrations in real-time.
-              <Styled.Links>
-                <Styled.LinkButton
-                  href="https://github.com/mitishagd/CartoonGenerator"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Styled.Github /> Code
-                </Styled.LinkButton>
-                <Styled.LinkButton
-                  href="https://cartoon-generator-five.vercel.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Styled.ExternalLink /> Demo
-                </Styled.LinkButton>
-              </Styled.Links>
-            </Styled.Description>
-          </Styled.Details>
-        </Styled.ProjectCard>
+        {profileData.projects.map((project, index) => (
+          <Styled.ProjectCard key={index}>
+            <Styled.Image>
+              <img src={projectImages[project.image]} alt={project.name} width="350" />
+            </Styled.Image>
+            <Styled.Details>
+              <Styled.ProjectName>{project.name}</Styled.ProjectName>
+              <Styled.Description>
+                {project.description}
+                <Styled.Links>
+                  <Styled.LinkButton
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Styled.Github /> Code
+                  </Styled.LinkButton>
+                  <Styled.LinkButton
+                    href={project.demoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Styled.ExternalLink /> Demo
+                  </Styled.LinkButton>
+                </Styled.Links>
+              </Styled.Description>
+            </Styled.Details>
+          </Styled.ProjectCard>
+        ))}
       </Styled.Content>
     </Styled.Root>
   )

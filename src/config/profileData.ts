@@ -64,4 +64,14 @@ export const profileData = {
       ],
     },
   ],
+  projects: [
+    {
+      name: 'Cartoon Generator',
+      description:
+        "A full-stack application that generates cartoon-style images from user text descriptions. Built with React and TypeScript on the frontend, it communicates with a serverless AWS Lambda backend that integrates with OpenAI's DALL-E 3 API to create custom cartoon illustrations in real-time.",
+      image: 'cartoonGenerator', // key to reference imported image
+      githubUrl: 'https://github.com/mitishagd/CartoonGenerator',
+      demoUrl: 'https://cartoon-generator-five.vercel.app/',
+    },
+  ],
 }
