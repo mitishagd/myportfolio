@@ -14,7 +14,7 @@ const Styled = {
     }
   `,
   Title: styled.h2`
-    font-size: 24px;
+    font-size: 26px;
     margin-bottom: 75px;
   `,
   Content: styled.div`

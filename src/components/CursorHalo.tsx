@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import styled from 'styled-components'
-import { useTheme } from '../theme/ThemeContext'
+import { useTheme } from '../hooks/useTheme'
 
 const Halo = styled.div<{ $x: number; $y: number }>`
   position: fixed;

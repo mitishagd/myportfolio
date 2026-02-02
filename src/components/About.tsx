@@ -19,7 +19,7 @@ const Styled = {
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
   `,
   Title: styled.h2`
-    font-size: 24px;
+    font-size: 26px;
     margin-bottom: 50px;
   `,
   ResumeButton: styled.a`

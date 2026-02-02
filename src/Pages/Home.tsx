@@ -10,6 +10,9 @@ import Footer from '../components/Footer.tsx'
 import NavBar from '../components/NavBar.tsx'
 import Projects from '../components/Projects.tsx'
 
+import { useTheme } from '../hooks/useTheme'
+import { lightTheme, darkTheme } from '../theme/theme'
+
 const Styled = {
   SocialLinksSidebar: styled(SocialLinksSidebar)``,
   AboutContainer: styled.div`
@@ -64,6 +67,9 @@ const Styled = {
 const bioText = 'Software Engineer | Passionate about tech improving lives | Dog Mom | Avid reader'
 
 const Home = () => {
+  const { isDarkMode } = useTheme()
+  const theme = isDarkMode ? darkTheme : lightTheme
+
   return (
     <Styled.Root>
       <NavBar />
@@ -75,7 +81,9 @@ const Home = () => {
             onInit={(typewriter) => {
               typewriter
                 .typeString('Hi, I am ')
-                .typeString('<span style="color: #10b981;">Mitisha Ganesha Dodderi</span>')
+                .typeString(
+                  `<span style="color: ${theme.secondary};">Mitisha Ganesha Dodderi</span>`
+                )
                 .typeString('.<br/><br/>')
                 .typeString('<span style="font-size: 18px;">' + bioText + '</span>')
                 .start()

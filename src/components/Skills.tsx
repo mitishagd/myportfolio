@@ -41,7 +41,7 @@ const Styled = {
     scroll-margin-top: 100px;
   `,
   Title: styled.h2`
-    font-size: 24px;
+    font-size: 26px;
     margin-bottom: 80px;
   `,
   IconWrapper: styled.div`

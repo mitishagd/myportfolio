@@ -1,4 +1,4 @@
-import { createContext, useContext } from 'react'
+import { createContext } from 'react'
 
 interface ThemeContextType {
   isDarkMode: boolean
@@ -9,5 +9,3 @@ export const ThemeContext = createContext<ThemeContextType>({
   isDarkMode: false,
   toggleTheme: () => {},
 })
-
-export const useTheme = () => useContext(ThemeContext)

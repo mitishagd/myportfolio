@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { FaBars, FaTimes, FaSun, FaMoon } from 'react-icons/fa'
 import logoDark from '../assets/icons/logo-dark.png'
 import logoLight from '../assets/icons/logo-light.png'
-import { useTheme } from '../theme/ThemeContext'
+import { useTheme } from '../hooks/useTheme'
 
 const Styled = {
   Container: styled.nav`
@@ -24,8 +24,8 @@ const Styled = {
     }
   `,
   Logo: styled.img`
-    height: 90px;
-    width: 90px;
+    height: 95px;
+    width: 95px;
 
     @media (max-width: 768px) {
       height: 70px;
