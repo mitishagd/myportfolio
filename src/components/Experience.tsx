@@ -15,7 +15,7 @@ const Styled = {
   `,
   Title: styled.h2`
     font-size: 24px;
-    margin-bottom: 10px;
+    margin-bottom: 75px;
   `,
   Content: styled.div`
     font-size: 16px;
@@ -23,7 +23,10 @@ const Styled = {
   `,
   Position: styled.div`
     margin: 5px 20px;
+    margin-bottom: 50px;
     padding: 5px 20px;
+    border-left: 3px solid ${({ theme }) => theme.primary};
+    padding-left: 20px;
 
     @media (max-width: 768px) {
       display: flex;
@@ -35,7 +38,9 @@ const Styled = {
     font-style: italic;
     color: ${({ theme }) => theme.primary};
     font-weight: normal;
-    transition: transform 0.2s ease, opacity 0.2s ease;
+    transition:
+      transform 0.2s ease,
+      opacity 0.2s ease;
     display: inline-block;
 
     &:hover {
